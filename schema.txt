@@ -1,0 +1,19 @@
+---keyspace:dns---
+
+nameserver
+ string address (PK) | count packets_sent | count packets_received
+---------------------+--------------------+-----------------------
+
+domain
+ string domain (PK) | count requests
+--------------------+---------------
+
+info
+ string ype (PK) | count packets
+-----------------+--------------
+
+conversation
+
+cname
+
+ns

@@ -1,19 +1,23 @@
 ---keyspace:dns---
 
 nameserver
- string address (PK) | count packets_sent | count packets_received
----------------------+--------------------+-----------------------
+ text address (PK) | counter packets_sent | counter packets_received
+-------------------+----------------------+-------------------------
 
 domain
- string domain (PK) | count requests
---------------------+---------------
+ text domain (PK) | counter requests
+------------------+-----------------
 
 info
- string ype (PK) | count packets
------------------+--------------
+ text type (PK) | counter packets
+----------------+----------------
 
 conversation
 
 cname
+ text cname (PK) | counter count
+-----------------+--------------
 
 ns
+ text ns (PK) | counter count
+--------------+--------------

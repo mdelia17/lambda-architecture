@@ -1,0 +1,99 @@
+8.8.8.8,172.31.132.216,DNS,225,Standard query response 0xb61d A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com A 54.254.216.194 A 52.76.198.0
+172.31.110.184,172.31.1.6,DNS,91,Standard query 0x418b A images-eu.ssl-images-amazon.com
+172.31.131.235,172.31.1.6,DNS,73,Standard query 0x283d A ud.adkmob.com
+172.31.131.235,172.31.1.6,DNS,88,Standard query 0xe824 A helpcmsecurity1.ksmobile.com
+172.31.1.6,172.31.3.121,DNS,73,Standard query 0xde6f A ud.adkmob.com
+172.31.1.4,125.19.40.90,DNS,65,Standard query 0x557b SOA ac.in
+172.31.147.246,172.31.1.6,DNS,72,Standard query 0x239e A ad.atdmt.com
+172.31.1.6,172.31.3.121,DNS,72,Standard query 0x5e1f A ad.atdmt.com
+172.31.129.5,172.31.1.6,DNS,82,Standard query 0x4a1d A n.effectivemeasure.net
+172.31.1.6,172.31.3.121,DNS,82,Standard query 0x782d A n.effectivemeasure.net
+172.31.3.121,172.31.1.6,DNS,265,Standard query response 0x782d A n.effectivemeasure.net CNAME traffic.em.io A 54.72.171.245 NS ns-d1.io NS ns-a2.io NS ns-a1.io NS ns-a4.io NS ns-l1.io NS ns-y1.io NS ns-a3.io
+172.31.110.126,172.31.1.6,DNS,82,Standard query 0x3586 A edge-mqtt.facebook.com
+172.31.1.6,172.31.138.124,DNS,86,Standard query response 0x475f A google.com A 216.58.198.238
+172.31.111.168,172.31.1.6,DNS,74,Standard query 0xed59 A imap.gmail.com
+172.31.106.170,172.31.1.6,DNS,79,Standard query 0xc598 A clients3.google.com
+172.31.121.161,172.31.1.6,DNS,75,Standard query 0x5942 A pins.amazon.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0x7e5e A pins.amazon.com
+172.31.3.121,172.31.1.6,DNS,77,Standard query response 0x7fcb Server failure A five24.zybcdvt.ru
+172.31.110.126,172.31.1.6,DNS,79,Standard query 0xef72 A clients3.google.com
+172.31.110.126,172.31.1.6,DNS,87,Standard query 0x192b A fu-7fab9ddce6.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x145e A fu-7fab9ddce6.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0x145e A fu-7fab9ddce6.upalytics.com A 206.222.0.153 A 206.222.17.70 A 206.222.17.89 A 206.222.0.134 A 173.45.127.162 A 206.222.0.172 A 173.45.110.162 A 209.51.213.198 A 173.45.127.143 A 173.45.110.181 A 173.45.108.209 A 209.51.213.236 A 209.51.213.217 A 206.222.17.108 A 173.45.108.228 A 173.45.110.143 A 173.45.127.181 A 173.45.108.247 NS e.gtld-servers.net NS k.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS i.gtld-servers.net NS b.gtld-servers.net NS f.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net
+172.31.148.116,172.31.1.6,DNS,75,Standard query 0x7e75 A data.flurry.com
+172.31.110.184,172.31.1.6,DNS,77,Standard query 0x768e A track.trkdate.com
+8.8.8.8,172.31.132.216,DNS,275,Standard query response 0xfb77 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org
+172.31.130.221,172.31.1.6,DNS,87,Standard query 0xfd54 A googleads.g.doubleclick.net
+172.31.1.6,172.31.206.232,DNS,92,Standard query response 0x8972 A www.google.co.in A 74.125.68.94
+172.31.1.6,172.31.206.232,DNS,112,Standard query response 0x8b01 A apis.google.com CNAME plus.l.google.com A 216.58.201.142
+172.31.1.6,172.31.3.121,DNS,79,Standard query 0xab6c A clients5.google.com
+172.31.1.6,172.31.206.232,DNS,120,Standard query response 0x1884 A id.google.co.in CNAME id.l.google.com A 216.58.220.3
+172.31.3.121,172.31.1.6,DNS,343,Standard query response 0xab6c A clients5.google.com CNAME clients.l.google.com A 216.58.208.238 NS d.gtld-servers.net NS c.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS k.gtld-servers.net NS e.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS a.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS i.gtld-servers.net NS h.gtld-servers.net
+172.31.1.6,172.31.206.232,DNS,119,Standard query response 0xd8f5 A clients5.google.com CNAME clients.l.google.com A 216.58.208.238
+172.31.1.6,172.31.3.121,DNS,96,Standard query 0xba44 A googlehosted.l.googleusercontent.com
+172.31.1.6,172.31.206.232,DNS,91,Standard query response 0x01dd A plus.google.com A 216.58.201.142
+172.31.1.6,172.31.206.232,DNS,91,Standard query response 0x469f A ssl.gstatic.com A 216.58.220.35
+172.31.1.6,172.31.137.241,DNS,135,Standard query response 0x9668 A twitter.com A 199.59.150.39 A 199.59.149.230 A 199.59.148.10 A 199.59.150.7
+172.31.110.126,172.31.1.6,DNS,87,Standard query 0x192b A fu-7fab9ddce6.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x8225 A fu-7fab9ddce6.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0x8225 A fu-7fab9ddce6.upalytics.com A 206.222.0.134 A 206.222.17.89 A 206.222.17.70 A 209.51.213.217 A 173.45.108.209 A 173.45.127.181 A 173.45.108.228 A 173.45.110.162 A 173.45.127.162 A 173.45.108.247 A 173.45.110.143 A 206.222.0.172 A 206.222.0.153 A 209.51.213.236 A 173.45.110.181 A 173.45.127.143 A 209.51.213.198 A 206.222.17.108 NS b.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net NS g.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net NS f.gtld-servers.net
+172.31.1.6,172.31.206.232,DNS,91,Standard query response 0xca64 A www.gstatic.com A 216.58.197.67
+172.31.1.6,172.31.206.232,DNS,90,Standard query response 0x6390 A www.google.com A 216.58.210.36
+172.31.168.221,172.31.1.6,DNS,79,Standard query 0xc3b9 A api.smoot.apple.com
+172.31.1.6,172.31.168.221,DNS,139,Standard query response 0xc3b9 A api.smoot.apple.com CNAME api.smoot-apple.com.akadns.net A 17.252.219.246
+172.31.144.163,172.31.1.6,DNS,79,Standard query 0x6deb AAAA accounts.google.com
+172.31.144.163,172.31.1.6,DNS,75,Standard query 0x6d6d AAAA ssl.gstatic.com
+172.31.147.246,172.31.1.6,DNS,82,Standard query 0x67b1 A download.microsoft.com
+172.31.1.6,172.31.3.121,DNS,92,Standard query 0x3494 A download.microsoft.com.nsatc.net
+172.31.147.246,172.31.1.6,DNS,83,Standard query 0xd60a A atlas.c10r.facebook.com
+172.31.129.5,172.31.1.6,DNS,73,Standard query 0x5a3b A ads.yahoo.com
+172.31.111.136,172.31.1.6,DNS,73,Standard query 0x9d70 A lh4.ggpht.com
+172.31.1.6,172.31.3.121,DNS,73,Standard query 0xa6af A lh4.ggpht.com
+172.31.3.121,172.31.1.6,DNS,358,Standard query response 0xa6af A lh4.ggpht.com CNAME photos-ugc.l.googleusercontent.com A 216.58.201.129 NS g.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS i.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS l.gtld-servers.net
+172.31.169.63,172.31.1.6,DNS,85,Standard query 0x7e1f A api.mobula.sdk.duapps.com
+172.31.1.6,172.31.169.63,DNS,132,Standard query response 0x7e1f A api.mobula.sdk.duapps.com CNAME duappsid.wshifen.com A 103.235.46.17
+172.31.169.63,172.31.1.6,DNS,85,Standard query 0x4b5a A analytics.query.yahoo.com
+172.31.1.6,172.31.169.63,DNS,159,Standard query response 0x4b5a A analytics.query.yahoo.com CNAME geo-cache-ds.internal.query.g03.yahoodns.net A 106.10.137.175
+172.31.106.130,172.31.1.6,DNS,84,Standard query 0xb1f3 A download.cdn.mozilla.net
+172.31.126.237,172.31.1.6,DNS,78,Standard query 0xce24 A graph.facebook.com
+172.31.1.6,172.31.161.13,DNS,134,Standard query response 0xb6ab No such name A teredo.ipv6.microsoft.com CNAME teredo.ipv6.microsoft.com.nsatc.net
+172.31.170.236,172.31.1.6,DNS,82,Standard query 0x9711 A edge-mqtt.facebook.com
+172.31.1.6,172.31.139.233,DNS,86,Standard query response 0xf980 A google.com A 216.58.198.238
+172.31.1.6,172.31.170.236,DNS,122,Standard query response 0x9711 A edge-mqtt.facebook.com CNAME mqtt.c10r.facebook.com A 179.60.192.2
+172.31.1.8,172.31.167.10,DNS,91,Standard query response 0xc3aa A ssl.gstatic.com A 216.58.220.35
+172.31.1.6,172.31.63.38,DNS,116,Standard query response 0xd58f A api.facebook.com CNAME star.c10r.facebook.com A 31.13.91.2
+172.31.111.100,172.31.1.6,DNS,84,Standard query 0x4131 A settings.crashlytics.com
+172.31.111.100,172.31.1.6,DNS,75,Standard query 0xe61c A t.appsflyer.com
+172.31.111.100,172.31.1.6,DNS,82,Standard query 0xffe4 A parse.newsinshorts.com
+172.31.1.6,172.31.63.38,DNS,135,Standard query response 0x1081 A b-api.facebook.com CNAME z-m.facebook.com CNAME z-m.c10r.facebook.com A 31.13.91.37
+172.31.145.24,172.31.1.6,DNS,74,Standard query 0xc811 A cdn.reporo.net
+172.31.1.6,172.31.3.121,DNS,74,Standard query 0x0c52 A cdn.reporo.net
+172.31.110.126,172.31.1.6,DNS,87,Standard query 0x6808 A fu-7fab9ddce6.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x7a43 A fu-7fab9ddce6.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0x7a43 A fu-7fab9ddce6.upalytics.com A 173.45.108.247 A 173.45.108.228 A 173.45.127.143 A 206.222.0.172 A 173.45.127.162 A 173.45.127.181 A 209.51.213.217 A 206.222.17.108 A 173.45.110.162 A 206.222.17.70 A 206.222.17.89 A 173.45.110.181 A 173.45.108.209 A 206.222.0.134 A 209.51.213.236 A 206.222.0.153 A 209.51.213.198 A 173.45.110.143 NS d.gtld-servers.net NS i.gtld-servers.net NS m.gtld-servers.net NS a.gtld-servers.net NS b.gtld-servers.net NS e.gtld-servers.net NS j.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS h.gtld-servers.net
+172.31.169.57,172.31.1.6,DNS,74,Standard query 0xeb84 A med.heyzap.com
+172.31.1.6,172.31.169.57,DNS,202,Standard query response 0xeb84 A med.heyzap.com A 107.21.212.50 A 54.243.190.29 A 107.21.125.220 A 107.20.133.215 A 174.129.239.234 A 107.20.226.32 A 50.19.215.188 A 23.23.172.98
+8.8.8.8,172.31.206.232,DNS,130,Standard query response 0x3b59 A lh3.googleusercontent.com CNAME googlehosted.l.googleusercontent.com A 216.58.197.65
+172.31.1.6,172.31.3.121,DNS,73,Standard query 0x30b0 A a.mologiq.net
+172.31.111.100,172.31.1.6,DNS,85,Standard query 0xe040 A read-api.newsinshorts.com
+172.31.1.6,172.31.63.82,DNS,119,Standard query response 0x2a00 A m.facebook.com CNAME star-mini.c10r.facebook.com A 31.13.90.36
+172.31.1.6,172.31.3.121,DNS,78,Standard query 0x4205 A api.pushbullet.com
+172.31.1.6,172.31.139.66,DNS,140,Standard query response 0x11a1 A imap.gmail.com CNAME gmail-imap.l.google.com A 64.233.167.108 A 64.233.167.109
+172.31.106.170,172.31.1.6,DNS,82,Standard query 0xda30 A edge-mqtt.facebook.com
+172.31.1.6,172.31.139.141,DNS,144,Standard query response 0xdea7 A tpc.googlesyndication.com CNAME pagead-googlehosted.l.google.com A 216.58.197.65
+172.31.148.170,172.31.1.6,DNS,70,Standard query 0x4eff A google.com
+172.31.110.126,172.31.1.6,DNS,87,Standard query 0x6808 A fu-7fab9ddce6.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x3528 A fu-7fab9ddce6.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0x3528 A fu-7fab9ddce6.upalytics.com A 173.45.108.247 A 209.51.213.198 A 173.45.108.228 A 173.45.110.181 A 206.222.0.134 A 209.51.213.217 A 206.222.17.70 A 206.222.17.108 A 173.45.127.143 A 206.222.0.153 A 173.45.127.162 A 173.45.110.162 A 206.222.17.89 A 173.45.110.143 A 209.51.213.236 A 206.222.0.172 A 173.45.127.181 A 173.45.108.209 NS f.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS l.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net NS c.gtld-servers.net NS d.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net
+172.31.147.246,172.31.1.6,DNS,83,Standard query 0x19d0 AAAA atlas.c10r.facebook.com
+172.31.1.6,172.31.138.250,DNS,120,Standard query response 0x029a A id.google.co.in CNAME id.l.google.com A 216.58.220.3
+172.31.1.6,172.31.63.171,DNS,211,Standard query response 0x604c A reports.crashlytics.com A 107.20.179.70 A 54.83.196.16 A 107.21.251.167 A 54.243.155.231 A 54.243.196.163 A 54.243.92.40 A 107.20.242.255 A 54.243.190.199
+172.31.147.246,172.31.1.6,DNS,85,Standard query 0x2b90 A e3673.dspg.akamaiedge.net
+172.31.1.6,172.31.3.121,DNS,85,Standard query 0x26ea A e3673.dspg.akamaiedge.net
+172.31.131.19,172.31.1.6,DNS,84,Standard query 0x4aca A www.youtube-nocookie.com
+172.31.131.235,172.31.1.6,DNS,75,Standard query 0xe6c9 A ssdk.adkmob.com
+172.31.126.15,172.31.1.6,DNS,79,Standard query 0x2ad8 A clients4.google.com
+172.31.110.184,172.31.1.6,DNS,82,Standard query 0x3364 A www.ourbetterworld.org
+172.31.1.6,172.31.3.121,DNS,82,Standard query 0x1a9f A www.ourbetterworld.org
+172.31.144.163,172.31.1.6,DNS,92,Standard query 0xb0cf A r1---sn-o3o-qxal.googlevideo.com
+172.31.170.243,172.31.1.6,DNS,79,Standard query 0xedf9 A iphone-ld.apple.com

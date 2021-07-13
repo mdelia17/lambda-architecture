@@ -1,0 +1,99 @@
+172.31.1.6,172.31.60.35,DNS,174,Standard query response 0x239e A www.goal.com CNAME www.goal.com.edgesuite.net CNAME a1985.g2.akamai.net A 180.149.61.146 A 180.149.61.153
+4.2.2.3,172.31.3.121,DNS,109,Standard query response 0x24ce A e3091.b.akamaiedge.net A 23.4.211.200 OPT
+172.31.3.121,172.31.1.6,DNS,391,Standard query response 0xb3e8 A api.taboola.com CNAME wildcard.taboola.com.edgekey.net CNAME e3091.b.akamaiedge.net A 23.4.211.200 NS k.gtld-servers.net NS d.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS f.gtld-servers.net NS j.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,82,Standard query 0xc887 A e3091.b.akamaiedge.net
+172.31.3.121,172.31.1.6,DNS,319,Standard query response 0xc887 A e3091.b.akamaiedge.net A 23.4.211.200 NS m.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS a.gtld-servers.net NS e.gtld-servers.net NS l.gtld-servers.net NS k.gtld-servers.net NS c.gtld-servers.net NS f.gtld-servers.net NS j.gtld-servers.net NS b.gtld-servers.net NS i.gtld-servers.net NS g.gtld-servers.net
+172.31.157.209,172.31.1.6,DNS,71,Standard query 0xd6f0 A sc.tynt.com
+172.31.1.6,172.31.60.35,DNS,174,Standard query response 0x154f A www.goal.com CNAME www.goal.com.edgesuite.net CNAME a1985.g2.akamai.net A 180.149.61.146 A 180.149.61.153
+172.31.170.13,172.31.1.6,DNS,73,Standard query 0x0000 A pawuiloeh.biz
+172.31.1.6,172.31.170.13,DNS,73,Standard query response 0x0000 No such name A pawuiloeh.biz
+74.82.42.42,172.31.3.121,DNS,109,Standard query response 0x3f51 A l.a.mobimagic.com A 52.72.55.14 A 54.152.220.195
+172.31.3.121,172.31.1.6,DNS,333,Standard query response 0x4d34 A l.a.mobimagic.com A 54.152.220.195 A 52.72.55.14 NS h.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS l.gtld-servers.net NS f.gtld-servers.net NS m.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net NS b.gtld-servers.net NS d.gtld-servers.net
+172.31.1.8,172.31.166.90,DNS,109,Standard query response 0xf271 A l.a.mobimagic.com A 54.152.220.195 A 52.72.55.14
+4.2.2.4,172.31.3.121,DNS,784,Standard query response 0x8bb1 DS mpc.am NSEC3 RRSIG SOA ns-pri.amnic.net RRSIG NSEC3 RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,342,Standard query response 0x518a A api.mpc.am A 148.251.10.76 A 148.251.10.84 A 148.251.10.77 A 148.251.10.15 A 148.251.10.80 NS am.cctld.authdns.ripe.net NS rip.psg.com NS ns-pri.amnic.net NS ns-pch.amnic.net NS ns-cdn.amnic.net NS fork.sth.dnsnode.net NS sns-pb.isc.org
+172.31.1.6,172.31.60.35,DNS,111,Standard query response 0x9d10 A a1985.g2.akamai.net A 180.149.61.146 A 180.149.61.153
+4.2.2.3,172.31.3.121,DNS,155,Standard query response 0x16a0 A adv-admlog-328963025.cn-north-1.elb.amazonaws.com.cn A 54.222.148.220 A 54.223.63.211 OPT
+74.82.42.42,172.31.3.121,DNS,77,Standard query response 0x3009 Server failure A five17.nydwhwi.ru
+172.31.3.121,172.31.1.6,DNS,256,Standard query response 0x3214 A adv-admlog-328963025.cn-north-1.elb.amazonaws.com.cn A 54.222.148.220 A 54.223.63.211 NS cns.cernet.net NS b.dns.cn NS c.dns.cn NS a.dns.cn NS d.dns.cn NS e.dns.cn
+172.31.148.220,172.31.1.6,DNS,76,Standard query 0xb73c A www.msftncsi.com
+172.31.1.6,172.31.3.121,DNS,117,Standard query 0x527f AAAA lb-miui-pub02-1843963089.ap-southeast-1.elb.amazonaws.com
+172.31.1.8,172.31.166.21,DNS,69,Standard query response 0xb0bf No such name A ptogdvnhg
+172.31.1.8,172.31.166.21,DNS,72,Standard query response 0x3d27 No such name A kdjnqdcehdqb
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x6681 A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x6681 A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS b.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS k.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x579a Server failure A officecdn.microsoft.com
+4.2.2.3,172.31.3.121,DNS,113,Standard query response 0xcf29 A pop.mail.rediff.akadns.net A 202.137.234.31 OPT
+172.31.1.8,172.31.166.21,DNS,72,Standard query response 0x86d9 No such name A kdjnqdcehdqb
+172.31.3.121,172.31.1.6,DNS,323,Standard query response 0x3cab A pop.mail.rediff.akadns.net A 202.137.234.31 NS d.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS m.gtld-servers.net NS l.gtld-servers.net NS i.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS a.gtld-servers.net NS j.gtld-servers.net NS g.gtld-servers.net
+4.2.2.4,172.31.3.121,DNS,383,Standard query response 0xc15b NS 172.in-addr.arpa NS z.arin.net NS u.arin.net NS r.arin.net NS arin.authdns.ripe.net NS y.arin.net NS x.arin.net RRSIG OPT
+4.2.2.4,172.31.3.121,DNS,316,Standard query response 0x85f7 NS tv NS ac1.nstld.com NS ac4.nstld.com NS ac3.nstld.com NS ac2.nstld.com RRSIG OPT
+172.31.105.159,172.31.1.6,DNS,83,Standard query 0x5644 A gld.push.samsungosp.com
+4.2.2.4,172.31.3.121,DNS,461,Standard query response 0xdfd5 NS com NS k.gtld-servers.net NS h.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS a.gtld-servers.net NS b.gtld-servers.net NS i.gtld-servers.net NS g.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net RRSIG OPT
+172.31.171.110,172.31.1.6,DNS,73,Standard query 0x1bdd A s.youtube.com
+172.31.1.6,172.31.171.110,DNS,124,Standard query response 0x1bdd A s.youtube.com CNAME video-stats.l.google.com A 216.58.201.142
+172.31.1.8,172.31.166.21,DNS,72,Standard query response 0x87cd No such name A kdjnqdcehdqb
+4.2.2.3,172.31.3.121,DNS,148,Standard query response 0x4ad8 AAAA a1168.dsw4.akamai.net AAAA 2a02:26f0:d9::58dd:3059 AAAA 2a02:26f0:d9::58dd:3052 OPT
+172.31.3.121,172.31.1.6,DNS,358,Standard query response 0x11da AAAA a1168.dsw4.akamai.net AAAA 2a02:26f0:d9::58dd:3052 AAAA 2a02:26f0:d9::58dd:3059 NS a.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net NS h.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net
+172.31.131.100,172.31.1.6,DNS,90,Standard query 0x65b1 AAAA r2.sn-vgqseney.googlevideo.com
+4.2.2.4,172.31.3.121,DNS,122,Standard query response 0x645b A advertising.microsoft.com.nsatc.net A 65.52.100.46 OPT
+172.31.148.122,172.31.1.6,DNS,75,Standard query 0x3fd2 A mail.google.com
+172.31.3.121,172.31.1.6,DNS,371,Standard query response 0x6e2a A advertising.microsoft.com CNAME advertising.microsoft.com.nsatc.net A 65.52.100.46 NS d.gtld-servers.net NS h.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS i.gtld-servers.net NS c.gtld-servers.net NS m.gtld-servers.net NS b.gtld-servers.net NS e.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,95,Standard query 0x5150 A advertising.microsoft.com.nsatc.net
+172.31.3.121,172.31.1.6,DNS,332,Standard query response 0x5150 A advertising.microsoft.com.nsatc.net A 65.52.100.46 NS m.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS e.gtld-servers.net NS j.gtld-servers.net NS g.gtld-servers.net NS b.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS c.gtld-servers.net
+172.31.12.119,172.31.1.6,DNS,81,Standard query 0xcf0b A us-mg6.mail.yahoo.com
+172.31.1.6,172.31.12.119,DNS,162,Standard query response 0xcf0b A us-mg6.mail.yahoo.com CNAME fd-geoycpi-uno.gycpi.b.yahoodns.net A 106.10.199.11 A 106.10.199.10
+172.31.148.253,172.31.1.6,DNS,90,Standard query 0x746c A xp.itunes-apple.com.akadns.net
+172.31.1.6,172.31.3.121,DNS,80,Standard query 0x7e7b A clk.tradedoubler.com
+4.2.2.4,172.31.3.121,DNS,121,Standard query response 0x01f3 A a1274.r.akamai.net A 104.86.110.114 A 104.86.110.106 OPT
+172.31.3.121,172.31.1.6,DNS,419,Standard query response 0x5b7c A carrentals.msn.com CNAME whitelabelv2.b2b.skyscanner.net.edgesuite.net CNAME a1274.r.akamai.net A 104.86.110.106 A 104.86.110.114 NS f.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS j.gtld-servers.net NS b.gtld-servers.net NS l.gtld-servers.net NS h.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,105,Standard query 0xd3e7 A whitelabelv2.b2b.skyscanner.net.edgesuite.net
+172.31.3.121,172.31.1.6,DNS,387,Standard query response 0xd3e7 A whitelabelv2.b2b.skyscanner.net.edgesuite.net CNAME a1274.r.akamai.net A 104.86.110.114 A 104.86.110.106 NS e.gtld-servers.net NS a.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS j.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS i.gtld-servers.net NS g.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,78,Standard query 0x5b65 A a1274.r.akamai.net
+172.31.3.121,172.31.1.6,DNS,331,Standard query response 0x5b65 A a1274.r.akamai.net A 104.86.110.114 A 104.86.110.106 NS m.gtld-servers.net NS l.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS i.gtld-servers.net
+172.31.170.241,172.31.1.6,DNS,75,Standard query 0x4555 A www.youtube.com
+172.31.1.6,172.31.170.241,DNS,125,Standard query response 0x4555 A www.youtube.com CNAME youtube-ui.l.google.com A 216.58.208.238
+172.31.150.209,172.31.1.6,DNS,84,Standard query 0x146a A webres5.qheal.ctmail.com
+4.2.2.4,172.31.3.121,DNS,88,Standard query response 0xb313 Server failure A five29.nydwhwi.ru OPT
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xa55c A microsoft.qualtrics.com
+172.31.145.50,172.31.1.6,DNS,84,Standard query 0xc062 A dnl-13.geo.kaspersky.com
+172.31.1.6,172.31.3.121,DNS,84,Standard query 0x990c A dnl-13.geo.kaspersky.com
+172.31.171.74,172.31.1.6,DNS,75,Standard query 0x07e3 A ws.ksmobile.net
+172.31.1.6,172.31.171.74,DNS,271,Standard query response 0x07e3 A ws.ksmobile.net CNAME cmwww-https-net-1244732952.us-west-1.elb.amazonaws.com A 52.9.108.26 A 54.67.3.168 A 52.8.191.4 A 52.8.150.184 A 52.9.79.82 A 52.9.79.7 A 50.18.206.210 A 54.215.222.163
+4.2.2.4,172.31.3.121,DNS,810,Standard query response 0x8671 DS trafficmanager.net NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.1.6,172.31.3.121,DNS,84,Standard query 0xf1db A p43-buy.itunes.apple.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xb5b7 A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,370,Standard query response 0xf1db A p43-buy.itunes.apple.com CNAME p43-buy.itunes-apple.com.akadns.net A 17.173.66.102 NS i.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS j.gtld-servers.net NS b.gtld-servers.net NS d.gtld-servers.net NS k.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,95,Standard query 0x9fab A p43-buy.itunes-apple.com.akadns.net
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0xb5b7 A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.32 A 23.63.98.43 NS a.gtld-servers.net NS k.gtld-servers.net NS h.gtld-servers.net NS j.gtld-servers.net NS c.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS e.gtld-servers.net
+172.31.3.121,172.31.1.6,DNS,332,Standard query response 0x9fab A p43-buy.itunes-apple.com.akadns.net A 17.173.66.102 NS g.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net NS d.gtld-servers.net NS i.gtld-servers.net NS b.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS c.gtld-servers.net NS h.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x8a85 Server failure A officecdn.microsoft.com
+172.31.145.59,172.31.1.6,DNS,89,Standard query 0x431d AAAA connectivitycheck.gstatic.com
+172.31.107.5,172.31.1.6,DNS,74,Standard query 0x1f7a A ab-gb.mgid.com
+172.31.1.6,172.31.3.121,DNS,74,Standard query 0xc99b A ab-gb.mgid.com
+172.31.3.121,172.31.1.6,DNS,342,Standard query response 0xc99b A ab-gb.mgid.com CNAME ab.goodsblock.mgid.com A 74.117.177.222 NS c.gtld-servers.net NS h.gtld-servers.net NS m.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS b.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net NS e.gtld-servers.net NS l.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,82,Standard query 0x2dd3 A ab.goodsblock.mgid.com
+172.31.157.209,172.31.1.6,DNS,75,Standard query 0x000a A pool.adizio.com
+172.31.3.121,172.31.1.6,DNS,322,Standard query response 0x2dd3 A ab.goodsblock.mgid.com A 74.117.177.222 NS f.gtld-servers.net NS h.gtld-servers.net NS b.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS c.gtld-servers.net NS d.gtld-servers.net NS a.gtld-servers.net NS i.gtld-servers.net
+4.2.2.4,172.31.3.121,DNS,148,Standard query response 0xcaa8 A r2---sn-5hne6nlz.googlevideo.com CNAME r2.sn-5hne6nlz.googlevideo.com A 173.194.158.167 OPT
+172.31.145.59,172.31.1.6,DNS,89,Standard query 0x4063 A connectivitycheck.gstatic.com
+4.2.2.4,172.31.3.121,DNS,125,Standard query response 0x0687 A chat-gateway250-prod.chat.snapchat.com A 130.211.180.161 OPT
+172.31.3.121,172.31.1.6,DNS,338,Standard query response 0x639e A chat-gateway250-prod.chat.snapchat.com A 130.211.180.161 NS h.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS d.gtld-servers.net NS b.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net NS i.gtld-servers.net NS l.gtld-servers.net
+172.31.125.87,172.31.1.6,DNS,75,Standard query 0x86f1 A ui.ff.avast.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0xb54a A ui.ff.avast.com
+172.31.1.6,172.31.137.241,DNS,101,Standard query response 0x72c5 A i.imgur.com CNAME imgur.com A 185.31.19.193
+172.31.129.255,172.31.1.6,DNS,86,Standard query 0x8069 A staragvod2-vh.akamaihd.net
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0xbfe7 A staragvod2-vh.akamaihd.net
+74.82.42.42,172.31.3.121,DNS,170,Standard query response 0x2af0 A yahoo.media.net CNAME contextualads.yahoo.net.edgekey.net CNAME e9701.g.akamaiedge.net A 23.195.48.59
+4.2.2.4,172.31.3.121,DNS,186,Standard query response 0x2d7a AAAA chat-gateway250-prod.chat.snapchat.com SOA ns-25.awsdns-03.com OPT
+172.31.3.121,172.31.1.6,DNS,175,Standard query response 0x3005 AAAA chat-gateway250-prod.chat.snapchat.com SOA ns-25.awsdns-03.com
+208.67.220.220,172.31.3.121,DNS,213,Standard query response 0xb901 AAAA lb-miui-pub02-1843963089.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org OPT
+172.31.3.121,172.31.1.6,DNS,199,Standard query response 0x527f AAAA lb-miui-pub02-1843963089.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org
+172.31.1.6,172.31.206.133,DNS,155,Standard query response 0x5990 AAAA global.api.huangye.miui.com CNAME lb-miui-pub02-1843963089.ap-southeast-1.elb.amazonaws.com
+4.2.2.3,172.31.3.121,DNS,120,Standard query response 0x2a29 A a990.g.akamai.net A 46.33.76.49 A 46.33.76.48 OPT
+172.31.3.121,172.31.1.6,DNS,330,Standard query response 0x5c78 A a990.g.akamai.net A 46.33.76.48 A 46.33.76.49 NS l.gtld-servers.net NS m.gtld-servers.net NS i.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS d.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS g.gtld-servers.net NS f.gtld-servers.net NS h.gtld-servers.net NS e.gtld-servers.net
+172.31.1.6,172.31.60.35,DNS,149,Standard query response 0x1f68 A 79423.analytics.edgesuite.net CNAME a990.g.akamai.net A 46.33.76.48 A 46.33.76.49
+172.31.1.6,172.31.60.35,DNS,149,Standard query response 0x1f68 A 79423.analytics.edgesuite.net CNAME a990.g.akamai.net A 46.33.76.48 A 46.33.76.49
+172.31.1.6,172.31.60.35,DNS,149,Standard query response 0x1f68 A 79423.analytics.edgesuite.net CNAME a990.g.akamai.net A 46.33.76.48 A 46.33.76.49
+172.31.105.159,172.31.1.6,DNS,77,Standard query 0xa3e3 A mtalk4.google.com
+172.31.1.6,172.31.206.133,DNS,219,Standard query response 0x48ff A global.api.huangye.miui.com CNAME lb-miui-pub02-1843963089.ap-southeast-1.elb.amazonaws.com A 52.76.105.38 A 54.169.117.8 A 54.169.5.225 A 54.169.149.247

@@ -1,0 +1,99 @@
+172.31.1.6,172.31.138.114,DNS,115,Standard query response 0xc9ff AAAA star-mini.c10r.facebook.com AAAA 2a03:2880:f00c:114:face:b00c:0:25de
+209.244.0.3,172.31.3.121,DNS,142,Standard query response 0xaa8c DS cdnga.net SOA a.gtld-servers.net
+172.31.12.170,172.31.1.6,DNS,74,Standard query 0xef3b A www.google.com
+172.31.1.6,172.31.12.170,DNS,90,Standard query response 0xef3b A www.google.com A 216.58.210.36
+8.8.8.8,172.31.132.156,DNS,275,Standard query response 0x145b AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x773b A datahub.serving-sys.com
+8.8.8.8,172.31.132.139,DNS,182,Standard query response 0xe5cd A dev.ezviz7.com CNAME tdev.ezviz7.com CNAME lbs-860051718.ap-southeast-1.elb.amazonaws.com A 52.77.9.229 A 54.169.171.29
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x47f8 A officecdn.microsoft.com
+172.31.1.8,172.31.166.21,DNS,72,Standard query response 0x5578 No such name A kdjnqdcehdqb
+208.67.220.220,172.31.3.121,DNS,132,Standard query response 0x0d77 A p41-content-current.edge.icloud.apple-dns.net A 17.248.154.145 OPT
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x47f8 A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS i.gtld-servers.net NS k.gtld-servers.net NS b.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS c.gtld-servers.net NS h.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x7612 Server failure A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,378,Standard query response 0x1bfb A p41-content.icloud.com CNAME p41-content-current.edge.icloud.apple-dns.net A 17.248.154.145 NS b.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS g.gtld-servers.net NS a.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net NS h.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,105,Standard query 0xe2e4 A p41-content-current.edge.icloud.apple-dns.net
+172.31.3.121,172.31.1.6,DNS,342,Standard query response 0xe2e4 A p41-content-current.edge.icloud.apple-dns.net A 17.248.154.145 NS i.gtld-servers.net NS j.gtld-servers.net NS l.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net NS f.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS m.gtld-servers.net
+172.31.147.103,172.31.1.6,DNS,69,Standard query 0x9084 A apple.com
+172.31.147.103,172.31.1.6,DNS,77,Standard query 0xd069 A guzzoni.apple.com
+172.31.147.103,172.31.1.6,DNS,79,Standard query 0x0d53 A api.smoot.apple.com
+172.31.147.103,172.31.1.6,DNS,90,Standard query 0x42e0 A p27-keyvalueservice.icloud.com
+172.31.1.6,172.31.3.121,DNS,90,Standard query 0x1ade A p27-keyvalueservice.icloud.com
+172.31.1.6,172.31.136.127,DNS,157,Standard query response 0xa830 A graph.instagram.com CNAME white.ish.instagram.com CNAME instagram.c10r.facebook.com A 31.13.70.52
+4.2.2.2,172.31.3.121,DNS,224,Standard query response 0x10be A dsn6.skype-dsn.akadns.net A 65.55.223.40 A 65.55.223.39 A 65.55.223.38 A 157.55.130.143 A 65.55.223.36 A 157.55.130.153 A 157.55.130.141 A 111.221.77.154 OPT
+172.31.3.121,172.31.1.6,DNS,434,Standard query response 0xda26 A dsn6.skype-dsn.akadns.net A 65.55.223.36 A 65.55.223.39 A 65.55.223.38 A 157.55.130.153 A 157.55.130.143 A 111.221.77.154 A 157.55.130.141 A 65.55.223.40 NS l.gtld-servers.net NS d.gtld-servers.net NS a.gtld-servers.net NS g.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS h.gtld-servers.net NS e.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS c.gtld-servers.net NS i.gtld-servers.net
+208.67.220.220,172.31.3.121,DNS,163,Standard query response 0x2653 DS wordpress.org SOA a0.org.afilias-nst.info OPT
+208.67.220.220,172.31.3.121,DNS,152,Standard query response 0x20c4 No such name A sorioiyuv.biz SOA a.gtld.biz OPT
+172.31.1.6,172.31.137.254,DNS,157,Standard query response 0x4469 A graph.instagram.com CNAME white.ish.instagram.com CNAME instagram.c10r.facebook.com A 31.13.70.52
+172.31.108.119,172.31.1.6,DNS,88,Standard query 0xb9a0 A fbcdn-profile-a.akamaihd.net
+172.31.105.90,172.31.1.6,DNS,75,Standard query 0x19f5 A play.google.com
+172.31.148.113,172.31.1.6,DNS,76,Standard query 0x76c2 A www.facebook.com
+172.31.1.6,172.31.3.121,DNS,76,Standard query 0xcae0 A stylesatlife.com
+172.31.105.90,172.31.1.6,DNS,77,Standard query 0x2b39 A play.l.google.com
+172.31.148.113,172.31.1.6,DNS,87,Standard query 0x5c99 A star-mini.c10r.facebook.com
+4.2.2.2,172.31.3.121,DNS,200,Standard query response 0x703d No such name A a.b-0.19-a3000008.0.16a8.a9d.3ea5.410.0.h443zwd1648upknrhwt4ld62jj.avts.mcafee.com SOA mcafee.com OPT
+172.31.3.121,172.31.1.6,DNS,189,Standard query response 0xcf4c No such name A a.b-0.19-a3000008.0.16a8.a9d.3ea5.410.0.h443zwd1648upknrhwt4ld62jj.avts.mcafee.com SOA mcafee.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x15fb A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x15fb A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS l.gtld-servers.net NS m.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS e.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x1aae Server failure A officecdn.microsoft.com
+208.67.220.220,172.31.3.121,DNS,148,Standard query response 0xa351 DS distil.us SOA a.cctld.us OPT
+172.31.1.6,172.31.139.236,DNS,98,Standard query response 0x341d A e3645.b.akamaiedge.net A 104.82.207.139
+4.2.2.2,172.31.3.121,DNS,162,Standard query response 0x7997 A tvf-prod-api-elb-458399985.ap-southeast-1.elb.amazonaws.com A 52.77.10.205 A 52.77.23.185 OPT
+172.31.3.121,172.31.1.6,DNS,375,Standard query response 0x7a82 A tvf-prod-api-elb-458399985.ap-southeast-1.elb.amazonaws.com A 52.77.10.205 A 52.77.23.185 NS f.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS g.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS l.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net
+172.31.131.76,172.31.1.6,DNS,93,Standard query 0xa4a2 A v10.vortex-win.data.microsoft.com
+172.31.130.193,172.31.1.6,DNS,88,Standard query 0x587b A asia.api.targetingmantra.com
+172.31.130.193,172.31.1.6,DNS,88,Standard query 0x6d89 A asia.api.targetingmantra.com
+4.2.2.2,172.31.3.121,DNS,201,Standard query response 0x67de AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com SOA ns-1053.awsdns-03.org OPT
+172.31.3.121,172.31.1.6,DNS,273,Standard query response 0x0916 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com SOA ns-1053.awsdns-03.org
+172.31.3.121,172.31.1.6,DNS,244,Standard query response 0x21f2 AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com SOA ns-1053.awsdns-03.org
+172.31.1.6,172.31.3.121,DNS,108,Standard query 0x0e2b AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.3.121,172.31.1.6,DNS,190,Standard query response 0x0e2b AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com SOA ns-1053.awsdns-03.org
+172.31.1.6,172.31.132.231,DNS,191,Standard query response 0x94e5 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.6,DNS,191,Standard query response 0x03ab AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.4,DNS,191,Standard query response 0xe639 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.230,DNS,191,Standard query response 0x1620 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.3,DNS,191,Standard query response 0xdcdb AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.5,DNS,191,Standard query response 0xdac6 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.245,DNS,191,Standard query response 0x2708 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.120,DNS,191,Standard query response 0xfdc6 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.122,DNS,191,Standard query response 0x0bb8 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.121,DNS,191,Standard query response 0x57be AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.1,DNS,191,Standard query response 0x1d61 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.7,DNS,191,Standard query response 0xae29 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.2,DNS,191,Standard query response 0x19dc AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.199,DNS,191,Standard query response 0x01bc AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.245,DNS,162,Standard query response 0x2709 AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.230,DNS,162,Standard query response 0x1621 AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.245,DNS,139,Standard query response 0x270a AAAA eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.151.1,172.31.1.6,DNS,78,Standard query 0xdf3a A graph.facebook.com
+172.31.1.6,172.31.138.138,DNS,98,Standard query response 0xe5b8 A content.googleapis.com A 74.125.68.239
+172.31.1.6,172.31.133.3,DNS,162,Standard query response 0xdcdc AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.230,DNS,139,Standard query response 0x1622 AAAA eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.245,DNS,108,Standard query response 0x270b AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.4,DNS,162,Standard query response 0xe63a AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.3,DNS,139,Standard query response 0xdcdd AAAA eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.6,DNS,162,Standard query response 0x03ac AAAA overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.148.156,172.31.1.6,DNS,86,Standard query 0x25ef A officeclient.microsoft.com
+172.31.123.83,172.31.1.6,DNS,87,Standard query 0xc4d9 PTR 177.123.31.172.in-addr.arpa
+172.31.1.6,172.31.132.245,DNS,223,Standard query response 0x270c A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com A 52.18.246.125 A 54.154.93.43
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0x7cae A officeclient.microsoft.com
+172.31.1.6,172.31.133.4,DNS,139,Standard query response 0xe63b AAAA eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.3,DNS,108,Standard query response 0xdcde AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.6,DNS,139,Standard query response 0x03ad AAAA eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.230,DNS,108,Standard query response 0x1623 AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.3.121,172.31.1.6,DNS,456,Standard query response 0x7cae A officeclient.microsoft.com CNAME prod.configsvc.live.com.akadns.net CNAME sea-config.officeapps.live.com CNAME osiprod-sea-snow-000.cloudapp.net A 207.46.237.84 NS k.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS i.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,94,Standard query 0x50ff A prod.configsvc.live.com.akadns.net
+172.31.3.121,172.31.1.6,DNS,419,Standard query response 0x50ff A prod.configsvc.live.com.akadns.net CNAME sea-config.officeapps.live.com CNAME osiprod-sea-snow-000.cloudapp.net A 207.46.237.84 NS h.gtld-servers.net NS a.gtld-servers.net NS m.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS i.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS g.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS e.gtld-servers.net NS d.gtld-servers.net
+172.31.1.6,172.31.133.4,DNS,108,Standard query response 0xe63c AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.133.6,DNS,108,Standard query response 0x03ae AAAA portal-lb-1237415662.eu-west-1.elb.amazonaws.com
+172.31.1.6,172.31.132.230,DNS,223,Standard query response 0x1624 A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com A 52.18.246.125 A 54.154.93.43
+172.31.1.6,172.31.133.3,DNS,223,Standard query response 0xdcdf A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com A 52.18.246.125 A 54.154.93.43
+208.67.222.222,172.31.3.121,DNS,165,Standard query response 0x634c No such name A fiabroaet.info SOA a0.info.afilias-nst.info OPT
+172.31.1.6,172.31.133.6,DNS,223,Standard query response 0x03af A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com A 52.18.246.125 A 54.154.93.43
+172.31.1.6,172.31.133.4,DNS,223,Standard query response 0xe63d A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME eu.hiddnsservice.com CNAME portal-lb-1237415662.eu-west-1.elb.amazonaws.com A 52.18.246.125 A 54.154.93.43
+172.31.148.113,172.31.1.6,DNS,81,Standard query 0x52f8 A staticxx.facebook.com
+172.31.148.113,172.31.1.6,DNS,79,Standard query 0xfb62 A static.xx.fbcdn.net
+172.31.1.6,172.31.137.124,DNS,88,Standard query response 0xd003 No such name A asia.api.targetingmantra.com
+172.31.126.0,172.31.1.6,DNS,146,Standard query 0xcadc A b-0.19-a3000408.8050081.16a8.ab2.3ea4.410.0.qswrlzclwnfjleeltzim8gsdwb.avts.mcafee.com
+172.31.1.6,172.31.3.121,DNS,146,Standard query 0x1cdc A b-0.19-a3000408.8050081.16a8.ab2.3ea4.410.0.qswrlzclwnfjleeltzim8gsdwb.avts.mcafee.com
+208.67.220.220,172.31.3.121,DNS,164,Standard query response 0xd753 DS dropboxstatic.com SOA a.gtld-servers.net OPT
+4.2.2.2,172.31.3.121,DNS,148,Standard query response 0x3e23 A r6---sn-p5qlsnsk.googlevideo.com CNAME r6.sn-p5qlsnsk.googlevideo.com A 173.194.7.44 OPT

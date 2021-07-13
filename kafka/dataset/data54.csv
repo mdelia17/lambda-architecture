@@ -1,0 +1,99 @@
+172.31.108.242,172.31.1.6,DNS,82,Standard query 0x1912 A edge-mqtt.facebook.com
+172.31.107.94,172.31.1.6,DNS,79,Standard query 0x8917 A clients3.google.com
+172.31.108.160,172.31.1.6,DNS,83,Standard query 0x5ec5 A youtube-ui.l.google.com
+172.31.156.78,172.31.1.6,DNS,76,Standard query 0x21b3 A ccc.sys.miui.com
+172.31.150.150,172.31.1.6,DNS,82,Standard query 0xd10a A 2.android.pool.ntp.org
+172.31.108.160,172.31.1.6,DNS,83,Standard query 0xc459 AAAA youtube-ui.l.google.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x8405 A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x8405 A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS h.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS d.gtld-servers.net NS g.gtld-servers.net NS m.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0xd3d4 Server failure A officecdn.microsoft.com
+172.31.126.47,172.31.1.6,DNS,88,Standard query 0x07ad A fbcdn-profile-a.akamaihd.net
+172.31.121.175,172.31.1.6,DNS,75,Standard query 0x9c61 A api.taboola.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0xb3e8 A api.taboola.com
+119.81.212.83,172.31.165.118,TCP,62,"53  >  50199 [SYN, ACK] Seq=0 Ack=1 Win=2920 Len=0 MSS=1412 SACK_PERM=1"
+172.31.156.78,172.31.1.6,DNS,76,Standard query 0x6d6c A api.sec.miui.com
+8.8.8.8,172.31.206.143,DNS,118,Standard query response 0x327a A safebrowsing.google.com CNAME sb.l.google.com A 216.58.197.78
+172.31.1.6,172.31.139.202,DNS,181,Standard query response 0x845f A configuration.apple.com CNAME configuration.apple.com.edgekey.net CNAME e5153.a.akamaiedge.net A 104.82.211.165
+119.81.212.83,172.31.165.118,TCP,424,"[TCP Retransmission] 53  >  50192 [PSH, ACK] Seq=1 Ack=358 Win=8192 Len=370"
+172.31.106.130,172.31.1.6,DNS,76,Standard query 0xdbd9 A ocsp.godaddy.com
+172.31.1.8,172.31.166.168,DNS,124,Standard query response 0x9bf4 A 6-edge-chat.facebook.com CNAME star.c10r.facebook.com A 31.13.91.2
+172.31.1.6,172.31.3.121,DNS,112,Standard query 0x3214 A adv-admlog-328963025.cn-north-1.elb.amazonaws.com.cn
+172.31.1.6,172.31.3.121,DNS,71,Standard query 0x949b A m.imgur.com
+172.31.3.121,172.31.1.6,DNS,325,Standard query response 0x949b A m.imgur.com CNAME imgur.com A 185.31.19.193 NS b.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net NS f.gtld-servers.net NS k.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS e.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS j.gtld-servers.net
+172.31.1.6,172.31.205.101,DNS,87,Standard query response 0x647b AAAA mobileservices.mckinsey.com
+172.31.144.230,172.31.1.6,DNS,88,Standard query 0xfc5c A realtime.services.disqus.com
+172.31.1.6,172.31.3.121,DNS,88,Standard query 0x600d A realtime.services.disqus.com
+172.31.3.121,172.31.1.6,DNS,392,Standard query response 0x600d A realtime.services.disqus.com A 184.173.90.195 A 108.168.151.6 A 173.192.82.195 A 173.192.82.194 A 173.192.82.196 NS b.gtld-servers.net NS g.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS d.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net
+172.31.1.4,125.19.40.90,DNS,65,Standard query 0x557b SOA ac.in
+172.31.151.36,172.31.1.6,DNS,81,Standard query 0xe754 A secure.brightcove.com
+8.8.8.8,172.31.3.121,DNS,124,Standard query response 0x7a5a A a1168.dsw4.akamai.net A 180.149.61.152 A 180.149.61.147 OPT
+172.31.3.121,172.31.1.6,DNS,334,Standard query response 0x90b7 A a1168.dsw4.akamai.net A 180.149.61.147 A 180.149.61.152 NS e.gtld-servers.net NS d.gtld-servers.net NS j.gtld-servers.net NS b.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS f.gtld-servers.net NS i.gtld-servers.net NS m.gtld-servers.net
+172.31.120.240,172.31.1.6,DNS,78,Standard query 0x7e6f A pop.rediffmail.com
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0x3cab A pop.mail.rediff.akadns.net
+172.31.126.47,172.31.1.6,DNS,81,Standard query 0xc206 A a1168.dsw4.akamai.net
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xc56f A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0xc56f A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.32 A 23.63.98.43 NS h.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net
+172.31.108.242,172.31.1.6,DNS,79,Standard query 0x0274 A clients3.google.com
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x39f7 Server failure A officecdn.microsoft.com
+8.8.8.8,172.31.3.121,DNS,265,Standard query response 0x1987 A eddie4.nl A 94.23.183.33 RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,262,Standard query response 0x168d A eddie4.nl A 94.23.183.33 NS ns4.dns.nl NS ns3.dns.nl NS nl1.dnsnode.net NS ns-nl.nic.fr NS sns-pb.isc.org NS ns1.dns.nl NS ns5.dns.nl NS ns2.dns.nl
+172.31.126.47,172.31.1.6,DNS,81,Standard query 0xbe1e AAAA a1168.dsw4.akamai.net
+172.31.1.6,172.31.3.121,DNS,81,Standard query 0x11da AAAA a1168.dsw4.akamai.net
+8.8.8.8,172.31.3.121,DNS,88,Standard query response 0x88fd Server failure A five24.zybcdvt.ru OPT
+172.31.123.35,172.31.1.6,DNS,88,Standard query 0x2282 A weatherapi.market.xiaomi.com
+172.31.156.78,172.31.1.6,DNS,79,Standard query 0x7cec A accounts.google.com
+172.31.129.248,172.31.1.6,DNS,76,Standard query 0x6f5c A www.msftncsi.com
+172.31.1.6,172.31.3.121,DNS,79,Standard query 0x214c A a1961.g2.akamai.net
+172.31.3.121,172.31.1.6,DNS,332,Standard query response 0x214c A a1961.g2.akamai.net A 23.205.168.10 A 23.205.168.32 NS g.gtld-servers.net NS i.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS c.gtld-servers.net NS h.gtld-servers.net NS b.gtld-servers.net NS d.gtld-servers.net NS l.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net
+8.8.8.8,172.31.206.119,DNS,98,Standard query response 0x09a0 A star.c10r.facebook.com A 31.13.79.246
+209.244.0.3,172.31.3.121,DNS,137,Standard query response 0x5229 No such name A five9.ryorpcr.ru SOA a.dns.ripn.net
+172.31.150.11,172.31.1.6,DNS,86,Standard query 0x7f9b A android.clients.google.com
+172.31.170.77,172.31.1.6,DNS,77,Standard query 0x5774 A five24.zybcdvt.ru
+172.31.104.117,172.31.1.6,DNS,90,Standard query 0x2edb A scontent.fbom1-1.fna.fbcdn.net
+8.8.8.8,172.31.132.143,DNS,275,Standard query response 0x3b88 AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org
+172.31.104.117,172.31.1.6,DNS,90,Standard query 0x1a08 A external.fbom1-1.fna.fbcdn.net
+172.31.104.117,172.31.1.6,DNS,83,Standard query 0x609b A z-p1-graph.facebook.com
+172.31.146.153,172.31.1.6,DNS,87,Standard query 0x01ee A googleads.g.doubleclick.net
+172.31.1.6,172.31.139.185,DNS,125,Standard query response 0x6003 A www.youtube.com CNAME youtube-ui.l.google.com A 216.58.208.238
+172.31.106.185,172.31.1.6,DNS,71,Standard query 0x86b5 A i.ytimg.com
+172.31.1.6,172.31.139.185,DNS,99,Standard query response 0x32ee A youtube-ui.l.google.com A 216.58.208.238
+172.31.1.6,172.31.139.185,DNS,111,Standard query response 0xcff2 AAAA youtube-ui.l.google.com AAAA 2607:f8b0:4005:805::200e
+172.31.157.209,172.31.1.6,DNS,78,Standard query 0x43b4 A tapestry.tapad.com
+172.31.157.209,172.31.1.6,DNS,75,Standard query 0x5333 A cmi.netseer.com
+8.8.8.8,172.31.3.121,DNS,157,Standard query response 0xc83b A codechef-vpc-elb-498843088.us-east-1.elb.amazonaws.com A 52.72.136.125 A 54.84.77.139 OPT
+172.31.3.121,172.31.1.6,DNS,370,Standard query response 0x3b05 A codechef-vpc-elb-498843088.us-east-1.elb.amazonaws.com A 54.84.77.139 A 52.72.136.125 NS b.gtld-servers.net NS d.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net NS i.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xef02 A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0xef02 A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.32 A 23.63.98.43 NS e.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.139.20,DNS,83,Standard query response 0x6d50 Server failure A officecdn.microsoft.com
+172.31.1.6,172.31.3.121,DNS,77,Standard query 0x5c78 A a990.g.akamai.net
+172.31.145.4,172.31.1.6,DNS,82,Standard query 0xb96d A master1.teamviewer.com
+8.8.8.8,172.31.3.121,DNS,154,Standard query response 0x15e1 A adlog.flurry.com CNAME flurry.adserver.prod.a04.yahoodns.net A 74.6.34.29 OPT
+172.31.3.121,172.31.1.6,DNS,364,Standard query response 0xaf90 A adlog.flurry.com CNAME flurry.adserver.prod.a04.yahoodns.net A 74.6.34.29 NS f.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS j.gtld-servers.net NS h.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS l.gtld-servers.net NS k.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS g.gtld-servers.net
+8.8.8.8,172.31.3.121,DNS,124,Standard query response 0xec67 A a1531.dsw4.akamai.net A 180.149.61.155 A 180.149.61.153 OPT
+172.31.3.121,172.31.1.6,DNS,334,Standard query response 0x3f69 A a1531.dsw4.akamai.net A 180.149.61.153 A 180.149.61.155 NS a.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net
+172.31.1.6,172.31.171.21,DNS,199,Standard query response 0x986f A fbexternal-a.akamaihd.net CNAME fbexternal-a.akamaihd.net.edgesuite.net CNAME a1531.dsw4.akamai.net A 180.149.61.153 A 180.149.61.155
+172.31.150.74,172.31.1.6,DNS,84,Standard query 0x19fd A ieonlinews.microsoft.com
+172.31.146.62,172.31.1.6,DNS,88,Standard query 0xca77 A fbcdn-profile-a.akamaihd.net
+172.31.123.249,172.31.1.6,DNS,79,Standard query 0x8e19 A mmi312.whatsapp.net
+172.31.156.78,172.31.1.6,DNS,90,Standard query 0x2391 A us.find.api.micloud.xiaomi.net
+172.31.1.6,172.31.3.121,DNS,90,Standard query 0x12d5 A us.find.api.micloud.xiaomi.net
+172.31.1.6,172.31.205.177,DNS,121,Standard query response 0x9d6c A mtalk.google.com CNAME mobile-gtalk.l.google.com A 74.125.71.188
+8.8.8.8,172.31.3.121,DNS,109,Standard query response 0xc0fd A e8339.a.akamaiedge.net A 122.252.139.112 OPT
+172.31.3.121,172.31.1.6,DNS,319,Standard query response 0x1cbc A e8339.a.akamaiedge.net A 122.252.139.112 NS d.gtld-servers.net NS h.gtld-servers.net NS b.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS e.gtld-servers.net NS j.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS m.gtld-servers.net NS i.gtld-servers.net NS g.gtld-servers.net
+172.31.1.6,172.31.170.70,DNS,168,Standard query response 0x8d71 A img1.junaroad.com CNAME img.junaroad.com.edgekey.net CNAME e8339.a.akamaiedge.net A 122.252.139.112
+8.8.8.8,172.31.3.121,DNS,236,Standard query response 0xe77c A a2047.dspl.akamai.net A 180.149.60.139 A 180.149.60.146 A 180.149.60.160 A 180.149.60.137 A 180.149.60.153 A 180.149.60.155 A 180.149.60.152 A 180.149.60.154 A 180.149.60.136 OPT
+172.31.3.121,172.31.1.6,DNS,446,Standard query response 0x738f A a2047.dspl.akamai.net A 180.149.60.153 A 180.149.60.160 A 180.149.60.146 A 180.149.60.137 A 180.149.60.136 A 180.149.60.139 A 180.149.60.154 A 180.149.60.152 A 180.149.60.155 NS g.gtld-servers.net NS m.gtld-servers.net NS f.gtld-servers.net NS e.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS b.gtld-servers.net NS c.gtld-servers.net NS i.gtld-servers.net NS h.gtld-servers.net NS l.gtld-servers.net
+172.31.1.6,172.31.206.133,DNS,70,Standard query response 0x13db AAAA miwifi.com
+172.31.146.67,172.31.1.6,DNS,85,Standard query 0x72a2 A mobile-gtalk.l.google.com
+8.8.8.8,172.31.3.121,DNS,172,Standard query response 0x11de A oas.oxfordjournals.org CNAME oasc00684.247realmedia.com CNAME oasc-eu1.247realmedia.com A 37.252.166.206 OPT
+172.31.146.153,172.31.1.6,DNS,69,Standard query 0x87ab A paytm.com
+172.31.104.89,172.31.1.6,DNS,79,Standard query 0xf806 A clients6.google.com
+172.31.156.78,172.31.1.6,DNS,82,Standard query 0x856c A edge-mqtt.facebook.com
+172.31.1.8,172.31.166.21,DNS,72,Standard query response 0xf3aa No such name A kdjnqdcehdqb
+172.31.126.47,172.31.1.6,DNS,81,Standard query 0xe56f A a2047.dspl.akamai.net
+172.31.126.47,172.31.1.6,DNS,81,Standard query 0xbe1e AAAA a1168.dsw4.akamai.net
+172.31.156.78,172.31.1.6,DNS,84,Standard query 0xb6ce A resolver.gslb.mi-idc.com
+172.31.126.47,172.31.1.6,DNS,81,Standard query 0x8867 AAAA a2047.dspl.akamai.net
+172.31.1.6,172.31.3.121,DNS,81,Standard query 0x7f20 AAAA a2047.dspl.akamai.net
+172.31.1.6,172.31.3.121,DNS,78,Standard query 0x6a28 A a1755.q.akamai.net
+172.31.171.74,172.31.1.6,DNS,78,Standard query 0xfab9 A cmdts.ksmobile.com

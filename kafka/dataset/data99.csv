@@ -1,0 +1,99 @@
+172.31.110.126,172.31.1.6,DNS,82,Standard query 0x72d3 A cm049.getui.igexin.com
+172.31.151.210,172.31.1.6,DNS,78,Standard query 0x5364 A apiv2.moengage.com
+172.31.1.7,172.31.6.6,DNS,72,Standard query response 0x30e3 No such name AAAA zonedirector
+172.31.149.130,172.31.1.6,DNS,75,Standard query 0xd926 A ssl.gstatic.com
+172.31.1.7,172.31.6.6,DNS,72,Standard query response 0x30e4 No such name A zonedirector
+172.31.1.7,172.31.6.6,DNS,72,Standard query response 0x30e5 No such name AAAA zonedirector
+172.31.1.8,172.31.166.136,DNS,178,Standard query response 0x1d3c A w.sharethis.com CNAME w.sharethis.com.edgesuite.net CNAME a335.b.akamai.net A 104.86.110.42 A 104.86.110.88
+172.31.1.7,172.31.6.6,DNS,72,Standard query response 0x30e6 No such name A zonedirector
+172.31.130.193,172.31.1.6,DNS,88,Standard query 0x22d9 A asia.api.targetingmantra.com
+172.31.146.242,172.31.1.6,DNS,79,Standard query 0x71cf A graph.instagram.com
+172.31.130.193,172.31.1.6,DNS,88,Standard query 0x0dc8 A asia.api.targetingmantra.com
+172.31.147.246,172.31.1.6,DNS,85,Standard query 0xf8c8 AAAA e3673.dspg.akamaiedge.net
+172.31.1.6,172.31.3.121,DNS,85,Standard query 0xbd52 AAAA e3673.dspg.akamaiedge.net
+172.31.147.24,172.31.1.6,DNS,84,Standard query 0x8e39 A kinsight-event.kakao.com
+172.31.1.8,172.31.165.202,DNS,203,Standard query response 0x63c4 A soma.smaato.net A 52.6.16.118 A 52.6.102.161 A 52.21.70.206 A 54.236.69.87 A 54.88.62.91 A 52.22.233.63 A 52.6.183.61 A 54.88.225.124
+172.31.104.175,172.31.1.6,DNS,76,Standard query 0xabfa A www.academia.edu
+172.31.1.6,172.31.3.121,DNS,76,Standard query 0x1005 A www.academia.edu
+209.244.0.3,172.31.3.121,DNS,76,Standard query response 0xf712 Server failure A five4.nydwhwi.ru
+172.31.127.64,172.31.1.6,DNS,76,Standard query 0xd5be A e16.whatsapp.net
+172.31.151.234,172.31.1.6,DNS,78,Standard query 0xc550 A www.googleapis.com
+172.31.129.5,172.31.1.6,DNS,76,Standard query 0xe820 A us-ads.openx.net
+172.31.1.6,172.31.3.121,DNS,76,Standard query 0x66ba A wd.sharethis.com
+172.31.3.121,172.31.1.6,DNS,468,Standard query response 0x66ba A wd.sharethis.com CNAME wd.p.sharethis.com.akadns.net A 54.183.95.162 A 54.183.88.223 A 54.153.102.149 A 54.183.85.197 A 54.183.97.25 A 54.67.82.49 A 54.153.98.152 A 54.67.127.23 NS i.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS e.gtld-servers.net NS m.gtld-servers.net NS d.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,89,Standard query 0xbc74 A wd.p.sharethis.com.akadns.net
+172.31.3.121,172.31.1.6,DNS,438,Standard query response 0xbc74 A wd.p.sharethis.com.akadns.net A 54.67.82.49 A 54.183.95.162 A 54.153.102.149 A 54.183.88.223 A 54.153.98.152 A 54.67.127.23 A 54.183.85.197 A 54.183.97.25 NS e.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net NS h.gtld-servers.net NS k.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net NS j.gtld-servers.net NS d.gtld-servers.net
+172.31.1.8,172.31.166.136,DNS,247,Standard query response 0xdbbb A wd.sharethis.com CNAME wd.p.sharethis.com.akadns.net A 54.67.82.49 A 54.183.95.162 A 54.153.102.149 A 54.183.88.223 A 54.153.98.152 A 54.67.127.23 A 54.183.85.197 A 54.183.97.25
+172.31.149.77,172.31.1.6,DNS,78,Standard query 0xb61d A graph.facebook.com
+172.31.128.222,172.31.1.6,DNS,83,Standard query 0xbd17 A officecdn.microsoft.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xf5f3 A officecdn.microsoft.com
+172.31.1.6,172.31.3.121,DNS,98,Standard query 0x91a5 A chat-gateway220-prod.chat.snapchat.com
+172.31.170.247,172.31.1.6,DNS,86,Standard query 0xfb05 A ads.adaptv.advertising.com
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0x76c1 A ads.adaptv.advertising.com
+172.31.3.121,172.31.1.6,DNS,547,Standard query response 0x76c1 A ads.adaptv.advertising.com CNAME control.adap.tv CNAME control.adap.tv.akadns.net CNAME control-ap.adap.tv CNAME control-jp.adap.tv CNAME ads-816899299.ap-southeast-1.elb.amazonaws.com A 54.254.141.105 A 54.255.156.80 A 52.76.166.254 A 54.169.20.98 A 54.254.130.65 A 54.169.89.134 A 54.255.210.99 A 52.76.3.166 NS j.gtld-servers.net NS h.gtld-servers.net NS d.gtld-servers.net NS b.gtld-servers.net NS g.gtld-servers.net NS f.gtld-servers.net NS m.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net
+172.31.1.6,172.31.170.247,DNS,86,Standard query response 0xfb05 Server failure A ads.adaptv.advertising.com
+172.31.146.236,172.31.1.6,DNS,78,Standard query 0xc62a A graph.facebook.com
+172.31.1.6,172.31.138.7,DNS,95,Standard query response 0x7987 A mmi740.whatsapp.net A 169.53.29.149
+172.31.1.6,172.31.3.121,DNS,76,Standard query 0xc1fc A wiki.pentaho.com
+172.31.3.121,172.31.1.6,DNS,316,Standard query response 0xc1fc A wiki.pentaho.com A 72.32.139.226 NS h.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS m.gtld-servers.net NS d.gtld-servers.net NS b.gtld-servers.net NS l.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS i.gtld-servers.net
+172.31.1.8,172.31.167.50,DNS,92,Standard query response 0x8a09 A wiki.pentaho.com A 72.32.139.226
+172.31.3.121,172.31.1.6,DNS,75,Standard query response 0x8c0d Server failure A loginen.7pk.com
+172.31.3.121,172.31.1.6,DNS,75,Standard query response 0xb607 Server failure A loginen.7pk.com
+172.31.3.121,172.31.1.6,DNS,75,Standard query response 0xb24e Server failure A loginen.7pk.com
+8.8.4.4,172.31.3.121,DNS,103,Standard query response 0xe44c A www.academia.edu A 46.137.210.247 OPT
+172.31.106.170,172.31.1.6,DNS,89,Standard query 0x5df2 A update.mobileassist.baidu.com
+172.31.126.0,172.31.1.6,DNS,140,Standard query 0xb114 A b-0.19-a3000008.0.16a8.ab2.3ea4.410.0.r7de6431m46uau282ursjvzep5.avts.mcafee.com
+172.31.1.6,172.31.3.121,DNS,140,Standard query 0xb51f A b-0.19-a3000008.0.16a8.ab2.3ea4.410.0.r7de6431m46uau282ursjvzep5.avts.mcafee.com
+172.31.151.36,172.31.1.6,DNS,77,Standard query 0x5bb9 A platform.bing.com
+172.31.3.105,172.31.1.6,DNS,86,Standard query 0xa208 PTR 244.136.55.42.in-addr.arpa
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0x49b2 PTR 244.136.55.42.in-addr.arpa
+172.31.148.170,172.31.1.6,DNS,95,Standard query 0x194c A au.v4.b1.download.windowsupdate.com
+8.8.4.4,172.31.3.121,DNS,90,Standard query response 0x4b7d No such name DS 31.172.in-addr.arpa OPT
+172.31.145.6,172.31.1.6,DNS,94,Standard query 0x139c A i-29.b-41866.bt.bench.utorrent.com
+172.31.111.238,172.31.1.6,DNS,74,Standard query 0x358a A imap.gmail.com
+172.31.149.77,172.31.1.6,DNS,79,Standard query 0xfa92 A track.appsflyer.com
+172.31.130.161,172.31.1.6,DNS,84,Standard query 0x63e6 A pubads.g.doubleclick.net
+172.31.1.6,172.31.138.83,DNS,157,Standard query response 0x8761 A api.im.hike.in CNAME api4.im.hike.in A 54.169.191.35 A 54.169.191.45 A 54.169.191.36 A 54.169.191.47
+8.8.4.4,172.31.3.121,DNS,125,Standard query response 0xb559 A chat-gateway220-prod.chat.snapchat.com A 107.178.219.100 OPT
+172.31.3.121,172.31.1.6,DNS,338,Standard query response 0x91a5 A chat-gateway220-prod.chat.snapchat.com A 107.178.219.100 NS d.gtld-servers.net NS m.gtld-servers.net NS f.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net
+172.31.170.201,172.31.1.6,DNS,76,Standard query 0x617d A www.google.co.in
+172.31.1.6,172.31.170.201,DNS,92,Standard query response 0x617d A www.google.co.in A 74.125.68.94
+172.31.170.201,172.31.1.6,DNS,76,Standard query 0x92b5 A www.google.co.in
+172.31.1.6,172.31.170.201,DNS,92,Standard query response 0x92b5 A www.google.co.in A 74.125.68.94
+172.31.170.201,172.31.1.6,DNS,75,Standard query 0xa79a A www.gstatic.com
+172.31.1.6,172.31.170.201,DNS,91,Standard query response 0xa79a A www.gstatic.com A 216.58.197.67
+8.8.4.4,172.31.3.121,DNS,514,Standard query response 0x4ee8 DS boxmusic.club SOA ns1.dns.nic.club NSEC BOXNE.club RRSIG RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,221,Standard query response 0xa28f A boxmusic.club A 104.25.231.18 A 104.25.230.18 NS ns3.dns.nic.club NS ns5.dns.nic.club NS ns6.dns.nic.club NS ns4.dns.nic.club NS ns1.dns.nic.club NS ns2.dns.nic.club
+172.31.1.8,172.31.166.136,DNS,105,Standard query response 0x59a6 A boxmusic.club A 104.25.231.18 A 104.25.230.18
+172.31.170.201,172.31.1.6,DNS,76,Standard query 0x0902 A www.google.co.in
+172.31.1.6,172.31.170.201,DNS,92,Standard query response 0x0902 A www.google.co.in A 74.125.68.94
+172.31.170.201,172.31.1.6,DNS,75,Standard query 0xf0eb A www.gstatic.com
+172.31.1.6,172.31.170.201,DNS,91,Standard query response 0xf0eb A www.gstatic.com A 216.58.197.67
+172.31.145.6,172.31.1.6,DNS,78,Standard query 0xc185 A update.utorrent.li
+8.8.4.4,172.31.3.121,DNS,117,Standard query response 0xb06d A r6.sn-5hnedned.googlevideo.com A 173.194.157.235 OPT
+172.31.3.121,172.31.1.6,DNS,361,Standard query response 0x66fe A r6---sn-5hnedned.googlevideo.com CNAME r6.sn-5hnedned.googlevideo.com A 173.194.157.235 NS i.gtld-servers.net NS m.gtld-servers.net NS l.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS j.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS e.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,90,Standard query 0xec5f A r6.sn-5hnedned.googlevideo.com
+172.31.3.121,172.31.1.6,DNS,330,Standard query response 0xec5f A r6.sn-5hnedned.googlevideo.com A 173.194.157.235 NS l.gtld-servers.net NS m.gtld-servers.net NS g.gtld-servers.net NS h.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS i.gtld-servers.net NS k.gtld-servers.net NS c.gtld-servers.net NS f.gtld-servers.net NS d.gtld-servers.net NS a.gtld-servers.net
+172.31.170.201,172.31.1.6,DNS,76,Standard query 0xc0dc AAAA www.google.co.in
+172.31.1.6,172.31.3.121,DNS,76,Standard query 0x7247 AAAA www.google.co.in
+172.31.170.201,172.31.1.6,DNS,75,Standard query 0x8782 AAAA www.gstatic.com
+172.31.1.6,172.31.170.201,DNS,103,Standard query response 0x8782 AAAA www.gstatic.com AAAA 2a00:1450:4003:804::2003
+8.8.4.4,172.31.3.121,DNS,152,Standard query response 0x569a AAAA e3673.dspg.akamaiedge.net AAAA 2600:140f:6:188::e59 AAAA 2600:140f:6:189::e59 OPT
+172.31.3.121,172.31.1.6,DNS,362,Standard query response 0xbd52 AAAA e3673.dspg.akamaiedge.net AAAA 2600:140f:6:189::e59 AAAA 2600:140f:6:188::e59 NS e.gtld-servers.net NS i.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS j.gtld-servers.net NS h.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS m.gtld-servers.net NS a.gtld-servers.net NS g.gtld-servers.net
+8.8.4.4,172.31.3.121,DNS,803,Standard query response 0xb9a9 DS popcash.net NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.170.201,172.31.1.6,DNS,74,Standard query 0xef6f A www.google.com
+172.31.1.6,172.31.170.201,DNS,90,Standard query response 0xef6f A www.google.com A 216.58.210.36
+8.8.4.4,172.31.3.121,DNS,806,Standard query response 0x951f DS academia.edu NSEC3 RRSIG SOA a.edu-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,203,Standard query response 0x1005 A www.academia.edu A 46.137.210.247 NS d.edu-servers.net NS l.edu-servers.net NS a.edu-servers.net NS c.edu-servers.net NS f.edu-servers.net NS g.edu-servers.net
+8.8.4.4,172.31.3.121,DNS,808,Standard query response 0x09bf DS newsinshorts.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.128.222,172.31.1.6,DNS,83,Standard query 0xbd17 A officecdn.microsoft.com
+172.31.170.201,172.31.1.6,DNS,74,Standard query 0x93f8 A www.google.com
+172.31.1.6,172.31.170.201,DNS,90,Standard query response 0x93f8 A www.google.com A 216.58.210.36
+172.31.170.201,172.31.1.6,DNS,74,Standard query 0x7a4a AAAA www.google.com
+172.31.1.6,172.31.170.201,DNS,102,Standard query response 0x7a4a AAAA www.google.com AAAA 2607:f8b0:4007:802::2004
+172.31.170.201,172.31.1.6,DNS,86,Standard query 0xb2ac A encrypted-tbn1.gstatic.com
+172.31.1.6,172.31.170.201,DNS,102,Standard query response 0xb2ac A encrypted-tbn1.gstatic.com A 216.58.199.174
+172.31.170.201,172.31.1.6,DNS,86,Standard query 0x67e5 A encrypted-tbn1.gstatic.com
+172.31.1.6,172.31.170.201,DNS,102,Standard query response 0x67e5 A encrypted-tbn1.gstatic.com A 216.58.199.174
+172.31.130.161,172.31.1.6,DNS,73,Standard query 0x9008 A yt3.ggpht.com
+8.8.4.4,172.31.3.121,DNS,811,Standard query response 0x1506 DS ero-advertising.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT

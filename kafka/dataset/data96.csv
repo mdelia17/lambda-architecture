@@ -1,0 +1,99 @@
+172.31.149.124,172.31.1.6,DNS,76,Standard query 0x048c A mtalk.google.com
+172.31.150.158,172.31.1.6,DNS,89,Standard query 0x1210 A connectivitycheck.android.com
+172.31.1.6,172.31.204.247,DNS,280,Standard query response 0x813e A xtrapath2.izatcloud.net CNAME xp2.gpsonextra.net CNAME d3bfhz8j7i21uk.cloudfront.net A 54.230.11.39 A 54.230.11.8 A 54.230.11.121 A 54.230.11.74 A 54.230.11.67 A 54.230.11.157 A 54.230.11.168 A 54.230.11.21
+172.31.1.6,172.31.3.121,DNS,74,Standard query 0x465b A feedback.uc.cn
+172.31.1.6,172.31.206.71,DNS,188,Standard query response 0xba1d A dc.ads.linkedin.com CNAME data-collector-linkedin-prod-803114458.eu-west-1.elb.amazonaws.com A 176.34.185.194 A 46.137.162.168
+172.31.3.121,172.31.1.6,DNS,228,Standard query response 0x465b A feedback.uc.cn CNAME uae.zc.ucdns.uc.cn A 119.147.224.130 NS ns.cernet.net NS a.dns.cn NS d.dns.cn NS e.dns.cn NS c.dns.cn NS b.dns.cn
+172.31.1.6,172.31.3.121,DNS,78,Standard query 0x6fdd A uae.zc.ucdns.uc.cn
+4.2.2.4,172.31.3.121,DNS,808,Standard query response 0x1482 DS ourbetterworld.org SOA a0.org.afilias-nst.info RRSIG NSEC3 RRSIG NSEC3 RRSIG OPT
+172.31.170.13,172.31.1.6,DNS,85,Standard query 0xa822 A teredo.ipv6.microsoft.com
+172.31.1.6,172.31.170.13,DNS,134,Standard query response 0xa822 No such name A teredo.ipv6.microsoft.com CNAME teredo.ipv6.microsoft.com.nsatc.net
+172.31.3.121,172.31.1.6,DNS,205,Standard query response 0x6fdd A uae.zc.ucdns.uc.cn A 119.147.224.130 NS d.dns.cn NS b.dns.cn NS c.dns.cn NS e.dns.cn NS ns.cernet.net NS a.dns.cn
+172.31.1.6,172.31.63.171,DNS,117,Standard query response 0x94b9 A feedback.uc.cn CNAME uae.zc.ucdns.uc.cn A 119.147.224.130
+172.31.3.121,172.31.1.6,DNS,248,Standard query response 0x8789 A ourbetterworld.org A 54.255.170.71 A 52.74.226.36 NS a2.org.afilias-nst.info NS b2.org.afilias-nst.org NS b0.org.afilias-nst.org NS c0.org.afilias-nst.info NS a0.org.afilias-nst.info NS d0.org.afilias-nst.org
+4.2.2.4,172.31.3.121,DNS,148,Standard query response 0xb658 A principal.discoveryservice.windowsphone.glbdns2.microsoft.com A 168.63.42.93 OPT
+172.31.3.121,172.31.1.6,DNS,405,Standard query response 0x29e8 A discoveryservice.windowsphone.com CNAME principal.discoveryservice.windowsphone.glbdns2.microsoft.com A 168.63.42.93 NS b.gtld-servers.net NS h.gtld-servers.net NS e.gtld-servers.net NS i.gtld-servers.net NS c.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS l.gtld-servers.net NS f.gtld-servers.net NS g.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net
+172.31.1.6,172.31.3.121,DNS,121,Standard query 0x3b3c A principal.discoveryservice.windowsphone.glbdns2.microsoft.com
+172.31.128.222,172.31.1.6,DNS,83,Standard query 0xeacf A officecdn.microsoft.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x6a8f A officecdn.microsoft.com
+172.31.3.121,172.31.1.6,DNS,361,Standard query response 0x3b3c A principal.discoveryservice.windowsphone.glbdns2.microsoft.com A 168.63.42.93 NS h.gtld-servers.net NS l.gtld-servers.net NS f.gtld-servers.net NS a.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net NS c.gtld-servers.net NS j.gtld-servers.net NS k.gtld-servers.net NS d.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x6a8f A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS c.gtld-servers.net NS h.gtld-servers.net NS m.gtld-servers.net NS b.gtld-servers.net NS i.gtld-servers.net NS l.gtld-servers.net NS a.gtld-servers.net NS g.gtld-servers.net
+172.31.147.84,172.31.1.6,DNS,76,Standard query 0x7d70 A api.sec.miui.com
+172.31.104.113,172.31.1.6,DNS,77,Standard query 0xee66 A asia.pool.ntp.org
+172.31.129.5,172.31.1.6,DNS,72,Standard query 0xa432 A cdn.tynt.com
+172.31.104.113,172.31.1.6,DNS,75,Standard query 0x97cf A e1.whatsapp.net
+172.31.169.16,172.31.1.6,DNS,79,Standard query 0x2b1e AAAA ws12.gti.mcafee.com
+172.31.1.6,172.31.169.16,DNS,119,Standard query response 0x2b1e AAAA ws12.gti.mcafee.com CNAME ws12.gti.mcafee.akadns.net
+172.31.169.16,172.31.1.6,DNS,79,Standard query 0x7140 A ws12.gti.mcafee.com
+172.31.1.6,172.31.169.16,DNS,247,Standard query response 0x7140 A ws12.gti.mcafee.com CNAME ws12.gti.mcafee.akadns.net A 161.69.165.63 A 161.69.165.23 A 161.69.165.17 A 161.69.165.57 A 161.69.165.26 A 161.69.165.25 A 161.69.165.59 A 161.69.165.19
+172.31.110.189,172.31.1.6,DNS,88,Standard query 0x3731 A truekeyapi.intelsecurity.com
+172.31.150.238,172.31.1.6,DNS,90,Standard query 0x6b9a A fbcdn-sphotos-f-a.akamaihd.net
+172.31.1.6,172.31.139.66,DNS,199,Standard query response 0xddde A fbexternal-a.akamaihd.net CNAME fbexternal-a.akamaihd.net.edgesuite.net CNAME a1531.dsw4.akamai.net A 180.149.61.153 A 180.149.61.155
+172.31.1.6,172.31.3.121,DNS,71,Standard query 0x023c A p.imgur.com
+208.67.222.222,172.31.3.121,DNS,158,Standard query response 0x3f60 DS zendesk.com SOA a.gtld-servers.net OPT
+172.31.1.8,172.31.164.186,DNS,148,Standard query response 0xda54 A staragvod2-vh.akamaihd.net CNAME a687.w10.akamai.net A 23.63.98.18 A 23.63.98.19
+172.31.121.175,172.31.1.6,DNS,78,Standard query 0xa4ae A ping.chartbeat.net
+209.244.0.3,172.31.3.121,DNS,77,Standard query response 0xe7f6 Server failure A five15.zybcdvt.ru
+172.31.126.15,172.31.1.6,DNS,79,Standard query 0x45fe A accounts.google.com
+172.31.125.168,172.31.1.6,DNS,84,Standard query 0x7131 A win10.ipv6.microsoft.com
+172.31.150.238,172.31.1.6,DNS,89,Standard query 0x5522 A fbcdn-photos-a-a.akamaihd.net
+172.31.150.238,172.31.1.6,DNS,89,Standard query 0x50df A fbcdn-photos-e-a.akamaihd.net
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x8182 A a1854.dspmm1.akamai.net
+172.31.146.163,172.31.1.6,DNS,72,Standard query 0x1bbb A clickadu.com
+74.82.42.42,172.31.3.121,DNS,136,Standard query response 0x4b8a A rts.dxsvr.com CNAME ng01.sh01.tira.cn A 115.239.211.176 A 180.97.33.177
+172.31.150.158,172.31.1.6,DNS,87,Standard query 0xf997 A fu-e102f45ad9.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0xf1d1 A fu-e102f45ad9.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0xf1d1 A fu-e102f45ad9.upalytics.com A 206.222.0.172 A 173.45.110.162 A 206.222.17.108 A 209.51.213.236 A 173.45.127.181 A 173.45.110.143 A 173.45.127.143 A 209.51.213.217 A 206.222.17.89 A 173.45.108.209 A 206.222.0.134 A 173.45.108.228 A 206.222.17.70 A 173.45.127.162 A 209.51.213.198 A 173.45.108.247 A 173.45.110.181 A 206.222.0.153 NS c.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net NS h.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS i.gtld-servers.net
+172.31.1.6,172.31.137.241,DNS,84,Standard query response 0xb469 A litds.ru A 91.223.123.48
+172.31.1.6,172.31.137.241,DNS,84,Standard query response 0xb469 A litds.ru A 91.223.123.48
+172.31.1.6,172.31.137.241,DNS,84,Standard query response 0xb469 A litds.ru A 91.223.123.48
+172.31.1.6,172.31.137.241,DNS,84,Standard query response 0xb469 A litds.ru A 91.223.123.48
+172.31.150.158,172.31.1.6,DNS,87,Standard query 0xf997 A fu-e102f45ad9.upalytics.com
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x590e A fu-e102f45ad9.upalytics.com
+172.31.3.121,172.31.1.6,DNS,551,Standard query response 0x590e A fu-e102f45ad9.upalytics.com A 173.45.108.209 A 206.222.17.89 A 209.51.213.198 A 209.51.213.236 A 173.45.127.162 A 206.222.0.134 A 173.45.110.162 A 206.222.17.70 A 173.45.110.143 A 206.222.0.153 A 206.222.17.108 A 173.45.108.247 A 173.45.110.181 A 173.45.127.143 A 206.222.0.172 A 209.51.213.217 A 173.45.127.181 A 173.45.108.228 NS j.gtld-servers.net NS g.gtld-servers.net NS d.gtld-servers.net NS b.gtld-servers.net NS f.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS m.gtld-servers.net NS a.gtld-servers.net NS k.gtld-servers.net
+8.8.8.8,172.31.132.215,DNS,275,Standard query response 0xfcda AAAA www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com SOA ns-1125.awsdns-12.org
+8.8.8.8,172.31.132.215,DNS,225,Standard query response 0xb01a A www.hik-online.com CNAME overseas.hiddnsservice.com CNAME as.hiddnsservice.com CNAME portal-2079987668.ap-southeast-1.elb.amazonaws.com A 54.254.216.194 A 52.76.198.0
+172.31.145.24,172.31.1.6,DNS,74,Standard query 0x3b5a A api.twilio.com
+172.31.1.6,172.31.3.121,DNS,74,Standard query 0x0382 A api.twilio.com
+172.31.1.6,172.31.206.71,DNS,120,Standard query response 0x06a0 A ad-apac.doubleclick.net CNAME dart.l.doubleclick.net A 216.58.220.38
+172.31.1.6,172.31.63.185,DNS,172,Standard query response 0xb1e2 A img1a.flixcart.com CNAME pmdssl.flixkart.com.edgekey.net CNAME e6665.g.akamaiedge.net A 23.211.214.11
+172.31.1.6,172.31.137.241,DNS,235,Standard query response 0x4167 A edge.quantserve.com CNAME akamai-edge.quantserve.com.akadns.net CNAME edge.quantserve.com.edgesuite.net CNAME a1811.g.akamai.net A 180.149.61.146 A 180.149.61.147
+172.31.129.5,172.31.1.6,DNS,76,Standard query 0x619d A ums.adtechjp.com
+172.31.146.163,172.31.1.6,DNS,88,Standard query 0x94cd A adspaces.ero-advertising.com
+172.31.147.201,172.31.1.6,DNS,76,Standard query 0x9120 A dns.msftncsi.com
+172.31.129.5,172.31.1.6,DNS,72,Standard query 0xfad9 A ib.adnxs.com
+172.31.127.45,172.31.1.6,DNS,94,Standard query 0xa8c7 A i-32.b-41372.ut.bench.utorrent.com
+172.31.111.136,172.31.1.6,DNS,73,Standard query 0x7c27 A lh6.ggpht.com
+172.31.146.163,172.31.1.6,DNS,75,Standard query 0x015d A cdn.popcash.net
+172.31.146.163,172.31.1.6,DNS,83,Standard query 0x57e5 A sayac.onlinewebstat.com
+172.31.1.6,172.31.63.185,DNS,172,Standard query response 0x02bf A img1a.flixcart.com CNAME pmdssl.flixkart.com.edgekey.net CNAME e6665.g.akamaiedge.net A 23.211.214.11
+172.31.129.5,172.31.1.6,DNS,74,Standard query 0xacd3 A dpm.demdex.net
+172.31.1.6,172.31.63.185,DNS,172,Standard query response 0x99e9 A img1a.flixcart.com CNAME pmdssl.flixkart.com.edgekey.net CNAME e6665.g.akamaiedge.net A 23.211.214.11
+172.31.129.5,172.31.1.6,DNS,78,Standard query 0x178e A tapestry.tapad.com
+172.31.169.196,172.31.1.6,DNS,75,Standard query 0x41f6 A mail.google.com
+172.31.1.6,172.31.169.196,DNS,118,Standard query response 0x41f6 A mail.google.com CNAME googlemail.l.google.com A 216.58.197.69
+172.31.125.33,172.31.1.6,DNS,74,Standard query 0x1d58 A alog.umeng.com
+172.31.1.6,172.31.3.121,DNS,74,Standard query 0x0284 A alog.umeng.com
+209.244.0.4,172.31.3.121,DNS,809,Standard query response 0x3736 DS onlinewebstat.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.122.169,172.31.1.6,DNS,79,Standard query 0xee10 A accounts.google.com
+172.31.3.121,172.31.1.6,DNS,339,Standard query response 0x884f A sayac.onlinewebstat.com A 217.195.203.213 A 217.195.203.197 NS b.gtld-servers.net NS j.gtld-servers.net NS e.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net NS d.gtld-servers.net NS m.gtld-servers.net NS h.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net
+172.31.131.76,172.31.1.6,DNS,86,Standard query 0xbf56 A officeclient.microsoft.com
+172.31.105.67,172.31.1.6,DNS,87,Standard query 0x7e96 A googleads.g.doubleclick.net
+4.2.2.4,172.31.3.121,DNS,807,Standard query response 0xd4b7 DS firsttoknow.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,347,Standard query response 0x4bd9 A firsttoknow.com A 52.88.58.99 A 54.187.253.69 A 52.11.56.148 NS l.gtld-servers.net NS k.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS m.gtld-servers.net NS j.gtld-servers.net NS h.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS d.gtld-servers.net NS g.gtld-servers.net NS i.gtld-servers.net
+172.31.1.8,172.31.166.136,DNS,123,Standard query response 0xadde A firsttoknow.com A 52.88.58.99 A 54.187.253.69 A 52.11.56.148
+4.2.2.4,172.31.3.121,DNS,803,Standard query response 0x51aa DS zendesk.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.3.121,172.31.1.6,DNS,346,Standard query response 0x2d9e A help.imgur.com CNAME imgur.ssl.zendesk.com A 104.218.200.164 NS g.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS k.gtld-servers.net NS i.gtld-servers.net NS m.gtld-servers.net NS e.gtld-servers.net NS c.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS j.gtld-servers.net NS a.gtld-servers.net
+172.31.3.121,172.31.1.6,DNS,321,Standard query response 0x3596 A imgur.ssl.zendesk.com A 104.218.200.164 NS m.gtld-servers.net NS k.gtld-servers.net NS l.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net NS a.gtld-servers.net NS d.gtld-servers.net NS i.gtld-servers.net NS j.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net
+172.31.1.6,172.31.137.241,DNS,122,Standard query response 0x7f97 A help.imgur.com CNAME imgur.ssl.zendesk.com A 104.218.200.164
+172.31.1.6,172.31.137.241,DNS,122,Standard query response 0x7f97 A help.imgur.com CNAME imgur.ssl.zendesk.com A 104.218.200.164
+172.31.1.6,172.31.137.241,DNS,122,Standard query response 0x7f97 A help.imgur.com CNAME imgur.ssl.zendesk.com A 104.218.200.164
+172.31.1.6,172.31.137.241,DNS,122,Standard query response 0x7f97 A help.imgur.com CNAME imgur.ssl.zendesk.com A 104.218.200.164
+172.31.145.177,172.31.1.6,DNS,79,Standard query 0xca97 A clients3.google.com
+172.31.145.177,172.31.1.6,DNS,82,Standard query 0xc6e3 A 2.android.pool.ntp.org
+209.244.0.4,172.31.3.121,DNS,802,Standard query response 0xbf0a DS disqus.com NSEC3 RRSIG SOA a.gtld-servers.net RRSIG NSEC3 RRSIG OPT
+172.31.127.153,172.31.1.6,DNS,91,Standard query 0xafa6 A instagram.fbom1-1.fna.fbcdn.net
+4.2.2.3,172.31.3.121,DNS,88,Standard query response 0x42dd Server failure A five15.zybcdvt.ru OPT
+172.31.145.24,172.31.1.6,DNS,84,Standard query 0x680d A www.google-analytics.com
+172.31.127.45,172.31.1.6,DNS,94,Standard query 0xa8c7 A i-32.b-41372.ut.bench.utorrent.com
+172.31.127.45,172.31.1.6,DNS,76,Standard query 0xe444 A go.microsoft.com

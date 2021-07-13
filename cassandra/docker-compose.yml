@@ -1,0 +1,26 @@
+version: '3'
+
+networks:
+  net-cassandra:
+    name: net-cassandra
+    driver: bridge
+
+services:
+  cas-node1:
+    container_name: 'cas-node1'
+    image: 'bitnami/cassandra:3.11.10'
+    restart: on-failure
+    networks:
+      - net-cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cas-node1
+      - HEAP_NEWSIZE=128M
+      - MAX_HEAP_SIZE=1024M
+
+  # cas-node2:
+  #   container_name: 'cas-node2'
+  #   image: 'bitnami/cassandra:3.11.10'
+  #   environment:
+  #     - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+  #     - CASSANDRA_SEEDS=-cas-node1,-cas-node2

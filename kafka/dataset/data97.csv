@@ -1,0 +1,99 @@
+172.31.127.45,172.31.1.6,DNS,85,Standard query 0xa808 A settings-ssl.xboxlive.com
+172.31.127.45,172.31.1.6,DNS,76,Standard query 0xe444 A go.microsoft.com
+172.31.1.6,172.31.3.121,DNS,86,Standard query 0x92ed A e11290.dspg.akamaiedge.net
+172.31.1.6,172.31.3.121,DNS,85,Standard query 0x294c A settings-ssl.xboxlive.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x9e87 A e10414.g.akamaiedge.net
+172.31.150.238,172.31.1.6,DNS,89,Standard query 0x1bdf A fbcdn-photos-d-a.akamaihd.net
+172.31.1.6,172.31.3.121,DNS,89,Standard query 0x7a8b A d26pugor41eo8c.cloudfront.net
+172.31.149.173,172.31.1.6,DNS,75,Standard query 0x82f3 A ssl.gstatic.com
+172.31.151.97,172.31.1.6,DNS,74,Standard query 0x4544 A m.facebook.com
+172.31.111.100,172.31.1.6,DNS,75,Standard query 0x7045 A down4.ucweb.com
+172.31.106.170,172.31.1.6,DNS,89,Standard query 0x05c1 A connectivitycheck.android.com
+172.31.106.170,172.31.1.6,DNS,89,Standard query 0x1481 A connectivitycheck.android.com
+172.31.106.170,172.31.1.6,DNS,102,Standard query 0xef59 A epdg.epc.mnc001.mcc001.pub.3gppnetwork.org
+172.31.125.222,172.31.1.6,DNS,113,Standard query 0x995f A p29-keyvalueservice-current.edge.icloud.apple-dns.net
+172.31.1.6,172.31.3.121,DNS,113,Standard query 0xcdce A p29-keyvalueservice-current.edge.icloud.apple-dns.net
+172.31.106.170,172.31.1.6,DNS,102,Standard query 0xfde7 A epdg.epc.mnc001.mcc001.pub.3gppnetwork.org
+172.31.1.6,172.31.139.237,DNS,129,Standard query response 0x3b71 A play.googleapis.com CNAME googleapis.l.google.com A 216.58.196.106
+172.31.129.143,172.31.1.6,DNS,85,Standard query 0xaa3a PTR 2.128.31.172.in-addr.arpa
+172.31.110.184,172.31.1.6,DNS,91,Standard query 0x418b A images-eu.ssl-images-amazon.com
+172.31.1.6,172.31.3.121,DNS,91,Standard query 0x15ff A images-eu.ssl-images-amazon.com
+172.31.145.24,172.31.1.6,DNS,75,Standard query 0x9155 A www.sucksex.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0x14ef A www.sucksex.com
+172.31.123.10,172.31.1.6,DNS,86,Standard query 0x47bc A android.clients.google.com
+172.31.1.6,172.31.137.241,DNS,197,Standard query response 0x4c35 A b.scorecardresearch.com CNAME b.scorecardresearch.com.edgesuite.net CNAME a1294.w20.akamai.net A 180.149.61.137 A 180.149.61.152
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0x7082 A cdn.taboola.com
+172.31.3.121,172.31.1.6,DNS,393,Standard query response 0x7082 A cdn.taboola.com CNAME esd-secure.taboola.com.edgekey.net CNAME e3091.d.akamaiedge.net A 23.211.219.137 NS i.gtld-servers.net NS j.gtld-servers.net NS d.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS m.gtld-servers.net NS a.gtld-servers.net NS f.gtld-servers.net NS l.gtld-servers.net NS c.gtld-servers.net NS k.gtld-servers.net NS e.gtld-servers.net NS b.gtld-servers.net
+172.31.1.6,172.31.137.241,DNS,172,Standard query response 0x08fe A cdn.taboola.com CNAME esd-secure.taboola.com.edgekey.net CNAME e3091.d.akamaiedge.net A 23.211.219.137
+4.2.2.3,172.31.3.121,DNS,88,Standard query response 0x6036 Server failure A five28.nydwhwi.ru OPT
+172.31.126.15,172.31.1.6,DNS,79,Standard query 0x6808 A accounts.google.com
+172.31.147.97,172.31.1.6,DNS,71,Standard query 0xd32b A ts.eset.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0x3911 A ts.wip.eset.com
+172.31.1.6,172.31.60.80,DNS,103,Standard query response 0x6b0a A partnerad.l.doubleclick.net A 216.58.201.130
+172.31.111.217,172.31.1.6,DNS,73,Standard query 0x3e8f A s.youtube.com
+172.31.120.246,172.31.1.6,DNS,81,Standard query 0x6028 A staticxx.facebook.com
+172.31.125.45,172.31.1.6,DNS,71,Standard query 0x2d05 A twitter.com
+172.31.125.45,172.31.1.6,DNS,76,Standard query 0x562b A www.facebook.com
+172.31.120.246,172.31.1.6,DNS,90,Standard query 0x06f9 A scontent.fbom1-1.fna.fbcdn.net
+8.8.8.8,172.31.3.121,DNS,88,Standard query response 0x3d04 Server failure A five22.zybcdvt.ru OPT
+172.31.110.184,172.31.1.6,DNS,91,Standard query 0x7faa A images-na.ssl-images-amazon.com
+172.31.1.6,172.31.3.121,DNS,91,Standard query 0x920b A images-na.ssl-images-amazon.com
+172.31.110.184,172.31.1.6,DNS,81,Standard query 0x193c A c.amazon-adsystem.com
+172.31.1.6,172.31.3.121,DNS,81,Standard query 0xc4f5 A c.amazon-adsystem.com
+172.31.131.196,172.31.1.6,DNS,82,Standard query 0x85a0 A i.mxplayer.j2inter.com
+172.31.145.6,172.31.1.6,DNS,90,Standard query 0x98c5 A sync.malwareprotectionlive.com
+172.31.1.6,172.31.3.121,DNS,90,Standard query 0x2fb3 A sync.malwareprotectionlive.com
+172.31.121.119,172.31.1.6,DNS,82,Standard query 0x0f5a A data.mistat.xiaomi.com
+172.31.151.1,172.31.1.6,DNS,74,Standard query 0xfd9c A www.google.com
+172.31.148.199,172.31.1.6,DNS,75,Standard query 0xe428 A ds.ssw.live.com
+172.31.146.170,172.31.1.6,DNS,75,Standard query 0xb5a5 A e1.whatsapp.net
+172.31.128.127,172.31.1.6,DNS,75,Standard query 0x0670 A csi.gstatic.com
+172.31.1.6,172.31.3.121,DNS,94,Standard query 0x90f6 A cache.images.globalsportsmedia.com
+172.31.145.177,172.31.1.6,DNS,75,Standard query 0x7e01 A e9.whatsapp.net
+172.31.1.6,172.31.3.121,DNS,71,Standard query 0xa39b A api.push.io
+172.31.1.6,172.31.205.169,DNS,92,Standard query response 0x6d30 A www.google.co.in A 74.125.68.94
+172.31.169.196,172.31.1.6,DNS,85,Standard query 0x6d80 A fbexternal-a.akamaihd.net
+172.31.1.6,172.31.169.196,DNS,199,Standard query response 0x6d80 A fbexternal-a.akamaihd.net CNAME fbexternal-a.akamaihd.net.edgesuite.net CNAME a1531.dsw4.akamai.net A 180.149.61.153 A 180.149.61.155
+172.31.107.86,172.31.1.6,DNS,76,Standard query 0xdc41 A www.google.co.in
+172.31.147.97,172.31.1.6,DNS,71,Standard query 0xd32b A ts.eset.com
+172.31.147.176,172.31.1.6,DNS,84,Standard query 0xdcb0 A 0-edge-chat.facebook.com
+172.31.147.176,172.31.1.6,DNS,76,Standard query 0x2a55 A www.facebook.com
+172.31.147.176,172.31.1.6,DNS,89,Standard query 0x86b3 A fbcdn-photos-a-a.akamaihd.net
+172.31.169.196,172.31.1.6,DNS,83,Standard query 0x8fd4 A fbstatic-a.akamaihd.net
+172.31.1.6,172.31.169.196,DNS,195,Standard query response 0x8fd4 A fbstatic-a.akamaihd.net CNAME fbstatic-a.akamaihd.net.edgesuite.net CNAME a1168.dsw4.akamai.net A 180.149.61.147 A 180.149.61.152
+8.8.8.8,172.31.132.183,DNS,182,Standard query response 0xeea0 A dev.ezviz7.com CNAME tdev.ezviz7.com CNAME lbs-860051718.ap-southeast-1.elb.amazonaws.com A 54.169.171.29 A 52.77.9.229
+172.31.147.176,172.31.1.6,DNS,89,Standard query 0xfb47 A fbcdn-photos-b-a.akamaihd.net
+172.31.147.176,172.31.1.6,DNS,88,Standard query 0xc5e2 A fbcdn-profile-a.akamaihd.net
+172.31.147.176,172.31.1.6,DNS,85,Standard query 0x8b4d A video-hkg3-1.xx.fbcdn.net
+172.31.148.250,172.31.1.6,DNS,76,Standard query 0x5462 A www.google.co.in
+172.31.147.231,172.31.1.6,DNS,73,Standard query 0xe999 A instagram.com
+172.31.145.6,172.31.1.6,DNS,90,Standard query 0x98c5 A sync.malwareprotectionlive.com
+172.31.151.210,172.31.1.6,DNS,79,Standard query 0x444b A track.appsflyer.com
+4.2.2.2,172.31.3.121,DNS,88,Standard query response 0xa410 Server failure A five14.nydwhwi.ru OPT
+172.31.1.6,172.31.139.185,DNS,112,Standard query response 0x3a13 AAAA video-stats.l.google.com AAAA 2a00:1450:400c:c01::65
+172.31.128.222,172.31.1.6,DNS,83,Standard query 0x584d A officecdn.microsoft.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0x894c A officecdn.microsoft.com
+172.31.147.176,172.31.1.6,DNS,87,Standard query 0xfb64 A fbcdn-vthumb-a.akamaihd.net
+172.31.1.6,172.31.3.121,DNS,87,Standard query 0x2c95 A fbcdn-vthumb-a.akamaihd.net
+172.31.3.121,172.31.1.6,DNS,543,Standard query response 0x894c A officecdn.microsoft.com CNAME officecdn15.c2r.microsoft.com.akadns.net CNAME officecdn15-worldwide.c2r.microsoft.com.akadns.net CNAME 2-01-3f20-0003.cdx.cedexis.net CNAME officecdn-prod.microsoft.com.edgesuite.net CNAME officecdn-prod.microsoft.com.edgesuite.net.globalredir.akadns.net CNAME a1737.dspw65.akamai.net A 23.63.98.43 A 23.63.98.32 NS f.gtld-servers.net NS e.gtld-servers.net NS g.gtld-servers.net NS a.gtld-servers.net NS c.gtld-servers.net NS h.gtld-servers.net NS d.gtld-servers.net NS i.gtld-servers.net
+172.31.3.121,172.31.1.6,DNS,425,Standard query response 0x2c95 A fbcdn-vthumb-a.akamaihd.net CNAME fbcdn-vthumb-a.akamaihd.net.edgesuite.net CNAME a591.dspda2.akamai.net A 88.221.49.26 A 88.221.49.74 NS i.gtld-servers.net NS e.gtld-servers.net NS h.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS f.gtld-servers.net NS c.gtld-servers.net NS b.gtld-servers.net NS a.gtld-servers.net NS m.gtld-servers.net NS k.gtld-servers.net NS j.gtld-servers.net NS g.gtld-servers.net
+172.31.147.176,172.31.1.6,DNS,85,Standard query 0x1e57 A fbexternal-a.akamaihd.net
+172.31.147.176,172.31.1.6,DNS,78,Standard query 0x0c8f A pixel.facebook.com
+172.31.1.6,172.31.3.121,DNS,83,Standard query 0xf958 A bn1304.storage.live.com
+172.31.1.6,172.31.3.121,DNS,107,Standard query 0x8fec A up-cm-vpc-137845722.us-west-1.elb.amazonaws.com
+172.31.147.176,172.31.1.6,DNS,87,Standard query 0xfb64 A fbcdn-vthumb-a.akamaihd.net
+8.8.8.8,172.31.132.233,DNS,182,Standard query response 0x53bd A dev.ezviz7.com CNAME tdev.ezviz7.com CNAME lbs-860051718.ap-southeast-1.elb.amazonaws.com A 52.77.9.229 A 54.169.171.29
+172.31.150.238,172.31.1.6,DNS,89,Standard query 0x5124 A fbcdn-photos-f-a.akamaihd.net
+172.31.120.246,172.31.1.6,DNS,74,Standard query 0xb284 A l.facebook.com
+172.31.145.190,172.31.1.6,DNS,81,Standard query 0x5bf4 A sa8.tuisong.baidu.com
+172.31.1.6,172.31.3.121,DNS,81,Standard query 0x0808 A sa8.tuisong.baidu.com
+172.31.3.121,172.31.1.6,DNS,377,Standard query response 0x0808 A sa8.tuisong.baidu.com CNAME agentchannel.api.n.shifen.com A 61.135.185.18 A 202.108.23.105 NS k.gtld-servers.net NS l.gtld-servers.net NS d.gtld-servers.net NS i.gtld-servers.net NS j.gtld-servers.net NS m.gtld-servers.net NS f.gtld-servers.net NS b.gtld-servers.net NS h.gtld-servers.net NS g.gtld-servers.net NS c.gtld-servers.net NS e.gtld-servers.net NS a.gtld-servers.net
+4.2.2.4,172.31.3.121,DNS,88,Standard query response 0x9b16 Server failure A five28.nydwhwi.ru OPT
+172.31.122.169,172.31.1.6,DNS,75,Standard query 0xf153 A video.ucweb.com
+172.31.1.6,172.31.3.121,DNS,75,Standard query 0xe4cf A video.ucweb.com
+172.31.150.150,172.31.1.6,DNS,76,Standard query 0x9b05 A api.facebook.com
+172.31.170.77,172.31.1.6,DNS,77,Standard query 0x4182 A five28.nydwhwi.ru
+172.31.144.163,172.31.1.6,DNS,92,Standard query 0xb0cf A r1---sn-o3o-qxal.googlevideo.com
+172.31.110.184,172.31.1.6,DNS,81,Standard query 0x193c A c.amazon-adsystem.com
+172.31.110.184,172.31.1.6,DNS,91,Standard query 0x7faa A images-na.ssl-images-amazon.com
+172.31.110.126,172.31.1.6,DNS,89,Standard query 0x753f A connectivitycheck.android.com

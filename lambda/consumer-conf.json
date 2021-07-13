@@ -1,0 +1,10 @@
+{
+    "connector.class": "io.confluent.connect.hdfs3.Hdfs3SinkConnector",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "tasks.max": "1",
+    "topics": "connect-file-pulse-quickstart-csv",
+    "hdfs.url": "hdfs://namenode:8020",
+    "flush.size": "99",
+    "confluent.topic.bootstrap.servers": "broker:29092",
+    "format.class": "io.confluent.connect.hdfs3.json.JsonFormat"
+}

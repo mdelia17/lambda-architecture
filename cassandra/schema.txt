@@ -4,7 +4,7 @@ nameserver
  text address (PK) | counter packets_sent | counter packets_received
 -------------------+----------------------+-------------------------
 
-domain
+famous
  text domain (PK) | counter requests
 ------------------+-----------------
 
@@ -16,10 +16,6 @@ conversation
  tuple<text,text,text> key (PK) | list<text> messages
 --------------------------------+--------------------
 
-cname
- text cname (PK) | counter count
------------------+--------------
-
-ns
- text ns (PK) | counter count
---------------+--------------
+domain
+ text domain (PK) | text type (PK) | counter requests
+------------------+----------------+-----------------

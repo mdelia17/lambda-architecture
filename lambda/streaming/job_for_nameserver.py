@@ -41,12 +41,21 @@ def filter_field(line):
     # return (words[2][1:-1], words[3][1:-1], words[4][1:-1], [words[6][1:-1], 1])
     return (words[0], words[1], words[4])
 
-def filter_line(line): 
+def filter_1_6_7_line(line): 
     words = line[2].split(" ")
     # "IP" not in line[2] perché potrebbero esserci anche pacchetti IPv6
     # return len(words) > 2 and line[2] != "TCP" and "IP" not in line[2]
     return words[0] == 'Standard' or words[0] == 'DNS' or words[0] == 'Inverse'
-    
+
+def filter_3_4_line(line): 
+    words = line[2].split(" ")
+    # "IP" not in line[2] perché potrebbero esserci anche pacchetti IPv6
+    # return len(words) > 2 and line[2] != "TCP" and "IP" not in line[2]
+    return words[0] == 'Dynamic' or words[0] == 'Zone'
+
+def filter_5_line(line):
+    return line[2].startswith("Server status")
+
 def build_certain(line):
     words = line[2].split(" ")
     if ((words[0] == 'Standard' or words[0] == 'Inverse') and words[2] != "response") or (words[0] == 'DNS' and words[4] != "response"):
@@ -68,38 +77,63 @@ def agg(line):
         packets_sent, packets_received = line[1][0] 
         return (line[0], packets_sent, packets_received)
 
+def server_status_mapper(line):
+    if line[2].startswith("Server status request response"):
+        return (line[0], [1,0])
+    else:
+        return (line[1], [0,1])
+
 def foreach_batch_function(df, epoch_id):
     # df.show(2, False)
-    lines_stream = df.rdd.map(list) 
+    try:
+        lines_stream = df.rdd.map(list) 
 
-    if not lines_stream.isEmpty():
         clean_stream = lines_stream.map(filter_field)
-        filtered_stream = clean_stream.filter(filter_line)
 
-        build_certain_stream = filtered_stream.map(build_certain)
-        build_uncertain_stream = filtered_stream.map(build_uncertain)
+        filtered_1_6_7_stream = clean_stream.filter(filter_1_6_7_line)
+        filtered_3_4_stream = clean_stream.filter(filter_3_4_line)
+        filtered_5_stream = clean_stream.filter(filter_5_line)
 
+        # casi 1, 6 e 7 #
+        build_certain_stream = filtered_1_6_7_stream.map(build_certain)
+        build_uncertain_stream = filtered_1_6_7_stream.map(build_uncertain)
         build_certain_agg_stream = build_certain_stream.reduceByKey(lambda a, b: [a[0] + b[0], a[1] + b[1]])
         build_uncertain_agg_stream =  build_uncertain_stream.reduceByKey(lambda a, b: [a[0] + b[0], a[1] + b[1]])
-
         join_stream = build_certain_agg_stream.leftOuterJoin(build_uncertain_agg_stream)
+        final_1_6_7_stream = join_stream.map(agg)
+        # print(final_1_6_7_stream.collect())
 
-        final_stream = join_stream.map(agg)
+        # casi 3 e 4 #
+        count_packet_1_stream = filtered_3_4_stream.map(lambda a: [(a[0], [1,0]), (a[1], [0,1])])
+        count_packet_2_stream = count_packet_1_stream.flatMap(lambda a: a)
+        count_packet_3_stream = count_packet_2_stream.reduceByKey(lambda a, b: [a[0] + b[0], a[1] + b[1]])
+        final_3_4_stream = count_packet_3_stream.map(lambda a: (a[0], a[1][0], a[1][1]))
+        # print(final_3_4_stream.collect())
 
-        if not final_stream.isEmpty():
-            # print(final_stream.collect())
-            spark = getSparkSessionInstance()
-            # Convert to DataFrame
-            columns = ["address", "packets_sent", "packets_received"]
-            df = final_stream.toDF(columns)
-            # df.printSchema()
-            df.show(truncate=False)
+        # caso 5 #
+        ip_stats_stream = filtered_5_stream.map(server_status_mapper)
+        ip_stats_stream = ip_stats_stream.reduceByKey(lambda a,b: [a[0]+b[0], a[1]+b[1]])
+        final_5_stream = ip_stats_stream.map(lambda a: (a[0], a[1][0], a[1][1]))
+        # print(final_5_stream.collect())
 
-            df.write\
-                .format("org.apache.spark.sql.cassandra")\
-                .mode('append')\
-                .options(keyspace="dns", table="nameserver")\
-                .save()
+        spark = getSparkSessionInstance()
+
+        final_stream = spark.sparkContext.union([final_1_6_7_stream, final_3_4_stream, final_5_stream])
+
+        # print(final_stream.collect())
+        # Convert to DataFrame
+        columns = ["address", "packets_sent", "packets_received"]
+        df = final_stream.toDF(columns)
+        # df.printSchema()
+        df.show(truncate=False)
+
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="nameserver")\
+            .save()
+    except:
+        pass
 
 schema = StructType() \
         .add("schema", StringType()) \
@@ -113,7 +147,7 @@ lines_DF = lines_DF\
     .select(from_json(lines_DF.value, schema))\
     .select("from_json(value).payload.message")\
     .writeStream\
-    .option("checkpointLocation", "file:///tmp/job_for_case_1_6_7")\
+    .option("checkpointLocation", "file:///tmp/job_for_nameserver")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination() 

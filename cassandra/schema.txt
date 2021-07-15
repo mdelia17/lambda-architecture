@@ -19,3 +19,19 @@ conversation
 domain
  text domain (PK) | text type (PK) | counter requests
 ------------------+----------------+-----------------
+
+window_count_ns_cname_domain
+ timestamp start (PK) | timestamp end (PK) | text type (PK) | text domain (PK) | counter requests
+----------------------+--------------------+----------------+------------------+-----------------
+
+window_address
+ timestamp start (PK) | timestamp end (PK) | inet address (PK) | counter packets_sent | counter packets_received
+----------------------+--------------------+----------------+-------------------------+-------------------------
+
+byte_sum_window
+ timestamp start (PK) | timestamp end (PK) | counter sum | counter count
+----------------------+--------------------+-------------+-------------- 
+
+type_window
+ timestamp start (PK) | timestamp end (PK) | text type | counter count
+----------------------+--------------------+-----------+--------------

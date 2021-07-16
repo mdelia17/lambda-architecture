@@ -61,9 +61,9 @@ def set_key(line):
         return ((id_query, source, destination), [info + " src: " + source + " dest: " + destination])
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(2, False)
-    lines_stream = df.rdd.map(list)
-    if not lines_stream.isEmpty():
+    try:
+        # df.show(2, False)
+        lines_stream = df.rdd.map(list)
         fields_stream = lines_stream.map(filter_field)
         all_request_response_stream = fields_stream.filter(request_response)
         set_key_stream = all_request_response_stream.map(set_key)
@@ -71,20 +71,20 @@ def foreach_batch_function(df, epoch_id):
         aggregate_stream = set_key_stream.reduceByKey(lambda a, b: a + b)
         # penso che se la lista è solo 1, quindi si vede solo una richiesta o solo una risposta, significa che la richiesta o la risposta si trova in un altro file
         filter_stream = aggregate_stream.filter(lambda a: len(a[1]) > 1)
+        # print(final_stream.collect())
+        spark = getSparkSessionInstance()
+        columns = ["cname", "count"]
+        df = filter_stream.toDF(columns)
+        # df.printSchema()
+        df.show(truncate=False)
 
-        if not filter_stream.isEmpty():
-            # print(final_stream.collect())
-            spark = getSparkSessionInstance()
-            columns = ["cname", "count"]
-            df = filter_stream.toDF(columns)
-            # df.printSchema()
-            df.show(truncate=False)
-
-            df.write\
-                .format("org.apache.spark.sql.cassandra")\
-                .mode('append')\
-                .options(keyspace="dns", table="conversation")\
-                .save()
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="conversation")\
+            .save()
+    except: 
+        pass
 
 schema = StructType() \
         .add("schema", StringType()) \

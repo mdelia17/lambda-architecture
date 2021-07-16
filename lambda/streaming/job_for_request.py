@@ -71,9 +71,9 @@ def famous(line):
     return ("other",number)
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(2, False)
-    lines_stream = df.rdd.map(list)
-    if not lines_stream.isEmpty():
+    try:
+        # df.show(2, False)
+        lines_stream = df.rdd.map(list)
         fields_stream = lines_stream.map(filter_field)
 
         # si prendono solo le richieste fatte al DNS e non le risposte
@@ -101,35 +101,35 @@ def foreach_batch_function(df, epoch_id):
         final_famous_stream = famous_stream.reduceByKey(lambda a, b: a + b)
         # print(final_famous_stream.collect())
 
-        if not final_famous_stream.isEmpty():
-            # Get the singleton instance of SparkSession 
-            spark = getSparkSessionInstance()
-            # Convert to DataFrame
-            columns = ["domain", "requests"]
-            df = final_famous_stream.toDF(columns)
-            df.printSchema()
-            df.show(truncate=False)
+        # Get the singleton instance of SparkSession 
+        getSparkSessionInstance()
+        # Convert to DataFrame
+        columns = ["domain", "requests"]
+        df = final_famous_stream.toDF(columns)
+        df.printSchema()
+        df.show(truncate=False)
 
-            df.write\
-                .format("org.apache.spark.sql.cassandra")\
-                .mode('append')\
-                .options(keyspace="dns", table="famous")\
-                .save()
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="famous")\
+            .save()
         
-        if not aggregate_stream.isEmpty():
-            # Get the singleton instance of SparkSession 
-            spark = getSparkSessionInstance()
-            # Convert to DataFrame
-            columns = ["domain", "type", "requests"]
-            df = domain_clean_stream.toDF(columns)
-            df.printSchema()
-            df.show(truncate=False)
+        # Get the singleton instance of SparkSession 
+        # spark = getSparkSessionInstance()
+        # Convert to DataFrame
+        columns = ["domain", "type", "requests"]
+        df = domain_clean_stream.toDF(columns)
+        df.printSchema()
+        df.show(truncate=False)
 
-            df.write\
-                .format("org.apache.spark.sql.cassandra")\
-                .mode('append')\
-                .options(keyspace="dns", table="domain")\
-                .save()
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="domain")\
+            .save()
+    except:
+        pass
 
 schema = StructType() \
         .add("schema", StringType()) \

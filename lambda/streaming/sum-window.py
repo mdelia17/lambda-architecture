@@ -14,14 +14,14 @@ def getSparkSessionInstance():
     return globals()['sparkSessionSingletonInstance']
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(df.count(), False)
-    lines_stream = df.rdd.map(list) 
-    # lines_stream.coalesce(1,True).saveAsTextFile("file:///Users/gianluca/Desktop/Big-Data/secondo-progetto/"+str(epoch_id)) 
-    if not lines_stream.isEmpty():
+    try: 
+        # df.show(df.count(), False)
+        lines_stream = df.rdd.map(list) 
+        # lines_stream.coalesce(1,True).saveAsTextFile("file:///Users/gianluca/Desktop/Big-Data/secondo-progetto/"+str(epoch_id)) 
         lines_stream = lines_stream.map(lambda line: ((line[0][0], line[0][1]), [int(line[1][3]), line[2]]))
         aggregate_stream = lines_stream.reduceByKey(lambda a, b: [a[0]+b[0], a[1]+b[1]]) 
         sum_avg_stream = aggregate_stream.map(lambda line: (line[0][0], line[0][1], line[1][0], line[1][1]))
-        spark = getSparkSessionInstance()
+        getSparkSessionInstance()
         columns = ["start", "end", "sum", "count"]
         df = sum_avg_stream.toDF(columns)
         df.printSchema()
@@ -32,8 +32,9 @@ def foreach_batch_function(df, epoch_id):
             .mode('append')\
             .options(keyspace="dns", table="byte_sum_window")\
             .save()
-
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
+    except: 
+        pass
 
 # initialize the SparkSession
 spark = SparkSession \

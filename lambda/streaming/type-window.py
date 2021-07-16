@@ -21,10 +21,10 @@ def filter_field(line):
         return ((line[0][0], line[0][1], words[0]+ " "+ words[1]), 1)
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(df.count(), False)
-    lines_stream = df.rdd.map(list) 
-    # lines_stream.coalesce(1,True).saveAsTextFile("file:///Users/gianluca/Desktop/Big-Data/secondo-progetto/"+str(epoch_id)) 
-    if not lines_stream.isEmpty():
+    try:
+        # df.show(df.count(), False)
+        lines_stream = df.rdd.map(list) 
+        # lines_stream.coalesce(1,True).saveAsTextFile("file:///Users/gianluca/Desktop/Big-Data/secondo-progetto/"+str(epoch_id)) 
         lines_stream = lines_stream.filter(request)
         lines_stream = lines_stream.map(filter_field)
         aggregate_stream = lines_stream.reduceByKey(lambda a, b: a+b) 
@@ -39,8 +39,9 @@ def foreach_batch_function(df, epoch_id):
             .mode('append')\
             .options(keyspace="dns", table="type_window")\
             .save()
-
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
+    except: 
+        pass
 
 # initialize the SparkSession
 spark = SparkSession \

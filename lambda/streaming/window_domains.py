@@ -36,10 +36,10 @@ def filter_field(line):
     return l
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(df.count(), False)
-    lines_stream = df.rdd.map(list) 
-    # print(lines_stream.collect()) 
-    if not lines_stream.isEmpty():
+    try:
+        # df.show(df.count(), False)
+        lines_stream = df.rdd.map(list) 
+        # print(lines_stream.collect()) 
         lines_stream = lines_stream.filter(filter_std_query).map(filter_field)
 
         flatten_rdd = lines_stream.flatMap(lambda l: l)
@@ -61,6 +61,8 @@ def foreach_batch_function(df, epoch_id):
             .save()
 
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
+    except: 
+        pass
 
 # initialize the SparkSession
 spark = SparkSession \

@@ -1,41 +1,41 @@
 ---keyspace:dns---
 
-nameserver
- text address (PK) | counter packets_sent | counter packets_received
+nameservers
+ inet address (PK) | counter packets_sent | counter packets_received
 -------------------+----------------------+-------------------------
 
-famous
- text domain (PK) | counter requests
+searched_categories
+ text category (PK) | counter requests
 ------------------+-----------------
 
-info
+message_types
  text type (PK) | counter packets
 ----------------+----------------
 
-conversation
- tuple<text,text,text> key (PK) | list<text> messages
+conversations
+ tuple<text,text,text> conversation_id (PK) | list<text> messages
 --------------------------------+--------------------
 
-domain
- text domain (PK) | text type (PK) | counter requests
+domain_requests_and_responses
+ text request_response (PK) | text type (PK) | counter requests
 ------------------+----------------+-----------------
 
-error
+errors
  inet address (PK) | counter errors
 -------------------+---------------
 
-window_count_ns_cname_domain
- timestamp start (PK) | timestamp end (PK) | text type (PK) | text domain (PK) | counter requests
+window_domain_requests_and_responses
+ timestamp start (PK) | timestamp end (PK) | text type (PK) | text request_response (PK) | counter requests
 ----------------------+--------------------+----------------+------------------+-----------------
 
-window_address
+window_exchanged_packets
  timestamp start (PK) | timestamp end (PK) | inet address (PK) | counter packets_sent | counter packets_received
 ----------------------+--------------------+----------------+-------------------------+-------------------------
 
-byte_sum_window
+window_byte_sums
  timestamp start (PK) | timestamp end (PK) | counter sum | counter count
 ----------------------+--------------------+-------------+-------------- 
 
-type_window
- timestamp start (PK) | timestamp end (PK) | text type | counter count
-----------------------+--------------------+-----------+--------------
+window_message_types
+ timestamp start (PK) | timestamp end (PK) | text type (PK) | counter count
+----------------------+--------------------+----------------+--------------

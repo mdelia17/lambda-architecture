@@ -8,7 +8,7 @@ def getSparkSessionInstance():
             .builder\
             .appName("SQL Example").master("local[*]")\
             .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "localhost")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
             .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
             .getOrCreate()
     return globals()['sparkSessionSingletonInstance']
@@ -37,7 +37,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="type_window")\
+            .options(keyspace="dns", table="window_message_types")\
             .save()
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
     except: 
@@ -55,8 +55,8 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "localhost:9092") \
-    .option("subscribe", "connect-file-pulse-quickstart-csv") \
-    .option("startingOffsets","earliest")\
+    .option("subscribe", "network_data") \
+    .option("startingOffsets","latest")\
     .load()
 
 # spark.sql("SET -v").show(n=200, truncate=False)
@@ -92,7 +92,7 @@ windowedCounts.printSchema()
 windowedCounts = windowedCounts\
     .writeStream\
     .outputMode('update')\
-    .option("checkpointLocation", "file:///tmp/spark-events")\
+    .option("checkpointLocation", "file:///tmp/type_window")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination()

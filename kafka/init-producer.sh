@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it connect rm -r /tmp/kafka-connect/examples
-docker exec -it connect mkdir -p /tmp/kafka-connect/examples
+docker exec -it kafka-connect-prod rm -r /tmp/kafka-connect-prod/network-data
+docker exec -it kafka-connect-prod mkdir -p /tmp/kafka-connect-prod/network-data

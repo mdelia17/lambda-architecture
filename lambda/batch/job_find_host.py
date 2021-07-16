@@ -18,7 +18,7 @@ def getSparkSessionInstance():
             .builder\
             .appName("SQL Example").master("local[*]")\
             .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cas-node1")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
             .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
             .config("spark.cassandra.auth.username", "cassandra")\
             .config("spark.cassandra.auth.password", "cassandra")\

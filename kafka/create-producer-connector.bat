@@ -1,0 +1,2 @@
+@ECHO OFF
+powershell -Command "Invoke-RestMethod -Method Put -Uri http://localhost:8083/connectors/kafka-connect-prod-00/config -ContentType "application/json" -Body $(get-content kafka-connect-prod-config.json -raw)"

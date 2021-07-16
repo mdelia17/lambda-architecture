@@ -1,2 +1,0 @@
-@ECHO OFF
-powershell -Command "Invoke-RestMethod -Method Put -Uri http://localhost:8083/connectors/connect-file-pulse-quickstart-csv/config -ContentType "application/json" -Body $(get-content connect-file-pulse-quickstart-csv.json -raw)"

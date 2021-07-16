@@ -17,7 +17,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "broker:29092") \
-    .option("subscribe", "connect-file-pulse-quickstart-csv") \
+    .option("subscribe", "network_data") \
     .option("startingOffsets","latest")\
     .load()
 
@@ -27,7 +27,7 @@ def getSparkSessionInstance():
             .builder\
             .appName("SQL Example").master("local[*]")\
             .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cas-node1")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
             .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
             .config("spark.cassandra.auth.username", "cassandra")\
             .config("spark.cassandra.auth.password", "cassandra")\
@@ -103,7 +103,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="info")\
+            .options(keyspace="dns", table="message_types")\
             .save()
 
         columns = ["address", "errors"]
@@ -114,7 +114,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="error")\
+            .options(keyspace="dns", table="errors")\
             .save()
     except:
         pass

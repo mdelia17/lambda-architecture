@@ -6,15 +6,15 @@ networks:
     driver: bridge
 
 services:
-  cas-node1:
-    container_name: 'cas-node1'
+  cassandra-1:
+    container_name: 'cassandra-1'
     image: 'bitnami/cassandra:3.11.10'
     restart: on-failure
     networks:
       - net-cassandra
     environment:
       - CASSANDRA_CLUSTER_NAME=cassandra-cluster
-      - CASSANDRA_SEEDS=cas-node1
+      - CASSANDRA_SEEDS=cassandra-1
       - HEAP_NEWSIZE=128M
       - MAX_HEAP_SIZE=1024M
 

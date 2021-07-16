@@ -17,7 +17,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "broker:29092") \
-    .option("subscribe", "connect-file-pulse-quickstart-csv") \
+    .option("subscribe", "network_data") \
     .option("startingOffsets","latest")\
     .load()
 
@@ -27,7 +27,7 @@ def getSparkSessionInstance():
             .builder\
             .appName("SQL Example").master("local[*]")\
             .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cas-node1")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
             .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
             .config("spark.cassandra.auth.username", "cassandra")\
             .config("spark.cassandra.auth.password", "cassandra")\
@@ -104,7 +104,7 @@ def foreach_batch_function(df, epoch_id):
         # Get the singleton instance of SparkSession 
         getSparkSessionInstance()
         # Convert to DataFrame
-        columns = ["domain", "requests"]
+        columns = ["category", "requests"]
         df = final_famous_stream.toDF(columns)
         df.printSchema()
         df.show(truncate=False)
@@ -112,13 +112,13 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="famous")\
+            .options(keyspace="dns", table="searched_categories")\
             .save()
         
         # Get the singleton instance of SparkSession 
         # spark = getSparkSessionInstance()
         # Convert to DataFrame
-        columns = ["domain", "type", "requests"]
+        columns = ["request_response", "type", "requests"]
         df = domain_clean_stream.toDF(columns)
         df.printSchema()
         df.show(truncate=False)
@@ -126,7 +126,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="domain")\
+            .options(keyspace="dns", table="domain_requests_and_responses")\
             .save()
     except:
         pass

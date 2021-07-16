@@ -20,6 +20,10 @@ domain
  text domain (PK) | text type (PK) | counter requests
 ------------------+----------------+-----------------
 
+error
+ inet address (PK) | counter errors
+-------------------+---------------
+
 window_count_ns_cname_domain
  timestamp start (PK) | timestamp end (PK) | text type (PK) | text domain (PK) | counter requests
 ----------------------+--------------------+----------------+------------------+-----------------

@@ -62,7 +62,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "broker:29092") \
-    .option("subscribe", "network_data") \
+    .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
 # lines_DF.printSchema()
@@ -92,7 +92,7 @@ windowedCounts = lines_DF\
 windowedCounts = windowedCounts\
     .writeStream\
     .outputMode('update')\
-    .option("checkpointLocation", "file:///tmp/window_address")\
+    .option("checkpointLocation", "file:///tmp/window_exchanged_packets")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination()

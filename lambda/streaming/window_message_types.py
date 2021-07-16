@@ -13,24 +13,31 @@ def getSparkSessionInstance():
             .getOrCreate()
     return globals()['sparkSessionSingletonInstance']
 
+def request(line):
+    return line[1][2] == "DNS"
+    
+def filter_field(line):
+        words = line[1][4].strip().split(" ")
+        return ((line[0][0], line[0][1], words[0]+ " "+ words[1]), 1)
+
 def foreach_batch_function(df, epoch_id):
-    try: 
+    try:
         # df.show(df.count(), False)
         lines_stream = df.rdd.map(list) 
         # lines_stream.coalesce(1,True).saveAsTextFile("file:///Users/gianluca/Desktop/Big-Data/secondo-progetto/"+str(epoch_id)) 
-        lines_stream = lines_stream.map(lambda line: ((line[0][0], line[0][1]), [int(line[1][3]), line[2]]))
-        aggregate_stream = lines_stream.reduceByKey(lambda a, b: [a[0]+b[0], a[1]+b[1]]) 
-        sum_avg_stream = aggregate_stream.map(lambda line: (line[0][0], line[0][1], line[1][0], line[1][1]))
-        getSparkSessionInstance()
-        columns = ["start", "end", "sum", "count"]
-        df = sum_avg_stream.toDF(columns)
+        lines_stream = lines_stream.filter(request)
+        lines_stream = lines_stream.map(filter_field)
+        aggregate_stream = lines_stream.reduceByKey(lambda a, b: a+b) 
+        aggregate_stream = aggregate_stream.map(lambda line: (line[0][0], line[0][1], line[0][2], line[1]))
+        spark = getSparkSessionInstance()
+        columns = ["start", "end", "type", "count"]
+        df = aggregate_stream.toDF(columns)
         df.printSchema()
         df.show(df.count(), False)
-
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="window_byte_sums")\
+            .options(keyspace="dns", table="window_message_types")\
             .save()
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
     except: 
@@ -48,7 +55,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "localhost:9092") \
-    .option("subscribe", "network_data") \
+    .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
 
@@ -74,6 +81,7 @@ lines_DF.printSchema()
 
 # Group the data by window and word and compute the count of each group
 windowedCounts = lines_DF\
+    .withWatermark("timestamp", "0 minutes") \
     .groupBy(
         window(lines_DF.timestamp, "20 seconds", "20 seconds"),
         lines_DF.fields)\
@@ -84,7 +92,7 @@ windowedCounts.printSchema()
 windowedCounts = windowedCounts\
     .writeStream\
     .outputMode('update')\
-    .option("checkpointLocation", "file:///tmp/sum_window")\
+    .option("checkpointLocation", "file:///tmp/window_message_types")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination()

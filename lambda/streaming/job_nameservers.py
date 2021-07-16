@@ -18,7 +18,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "broker:29092") \
-    .option("subscribe", "network_data") \
+    .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
 
@@ -147,7 +147,7 @@ lines_DF = lines_DF\
     .select(from_json(lines_DF.value, schema))\
     .select("from_json(value).payload.message")\
     .writeStream\
-    .option("checkpointLocation", "file:///tmp/job_for_nameserver")\
+    .option("checkpointLocation", "file:///tmp/job_nameservers")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination() 

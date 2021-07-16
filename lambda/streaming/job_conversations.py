@@ -17,7 +17,7 @@ lines_DF = spark \
     .readStream \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "broker:29092") \
-    .option("subscribe", "network_data") \
+    .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
 
@@ -42,24 +42,19 @@ def filter_field(line):
 def request_response(line):
     words = line[2].split(" ")
     # forse qua era più giusto filtrare per "DNS"
-    return words[0] == 'Standard' or words[0] == 'Unknown'
+    return words[0] == 'Standard'
 
 def set_key(line):
     source, destination, info = line
-    infos = info.split(" ")
-    if infos[0] == 'Standard':
-        if infos[2] != 'response':
-            id_query = infos[2]
-            return ((id_query, source, destination), [info + " src: " + source + " dest: " + destination])
-        else:
-            # da notare che quando si ha una response gli indirizzi IP vengono invertiti, in modo da fare una reduceByKey dopo
-            id_query = infos[3]
-            return ((id_query, destination, source), [info + " src: " + source + " dest: " + destination])
-    else:
-        # qui si è nel caso "Unknown ..."
-        id_query = infos[3][0:6]
+    words = info.split(" ")
+    if words[2] != 'response':
+        id_query = words[2]
         return ((id_query, source, destination), [info + " src: " + source + " dest: " + destination])
-
+    else:
+        # da notare che quando si ha una response gli indirizzi IP vengono invertiti, in modo da fare una reduceByKey dopo
+        id_query = words[3]
+        return ((id_query, destination, source), [info + " src: " + source + " dest: " + destination])
+    
 def foreach_batch_function(df, epoch_id):
     try:
         # df.show(2, False)
@@ -98,7 +93,7 @@ lines_DF = lines_DF\
     .select(from_json(lines_DF.value, schema))\
     .select("from_json(value).payload.message")\
     .writeStream\
-    .option("checkpointLocation", "file:///tmp/job_for_conversation")\
+    .option("checkpointLocation", "file:///tmp/job_conversations")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination() 

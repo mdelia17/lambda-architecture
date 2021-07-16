@@ -25,15 +25,27 @@ def format_line(line):
 
 def request(line):
         words = line[2].split(" ")
-        return "CNAME" in words
+        # len(words) > 2 va fatto per colpa dell'header
+        return words[0] == "Standard"
 
-def cname_lookup(line):
-        words = line[2].split(" ")
-        cnames = []
-        for i in range(len(words)-1):
-            if words[i] == "CNAME":
-                cnames.append((words[i+1], {line[0]}))
-        return cnames
+def line_lookup(line):
+        info = line[2].strip().split(" ")
+        if info[2] != "response":
+                url = info[-1]
+                domain = url.strip().split(".")
+                if len(domain) > 1:
+                        string = domain[-2] + "." + domain[-1]
+                else:
+                        string = domain[-1]
+                return [[("A", string), {line[0]}]]
+        else:
+                l = []
+                for i in range(len(info)-1):
+                        if info[i] == "CNAME":
+                                l.append([("CNAME", info[i+1]), {line[0]}])
+                        if info[i] == "NS":
+                                l.append([("NS", info[i+1]), {line[0]}])
+        return l    
 
 input_rdd = spark.sparkContext.textFile(input_filepath).cache()
 
@@ -45,7 +57,7 @@ fields_stream = json_rdd.map(format_line)
 all_request_stream = fields_stream.filter(request)
 
 # cambio del contenuto del campo info nel record
-clear_request_stream = all_request_stream.map(cname_lookup)
+clear_request_stream = all_request_stream.map(line_lookup)
 
 cnames_stream = clear_request_stream.flatMap(lambda line: line)
 

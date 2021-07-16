@@ -59,34 +59,65 @@ def filter_line(line):
     # "IP" not in line[2] perché potrebbero esserci anche pacchetti IPv6
     return "TCP" not in fields[2] and "IP" not in fields[2]
 
+def filter_errors(line):
+    fields = line[0].strip().split(",")
+    info = fields[4].strip().split(" ")
+    # "IP" not in line[2] perché potrebbero esserci anche pacchetti IPv6
+    types = ["Standard", "Dynamic", "Zone", "Server", "Inverse", "DNS"]
+    return info[0] not in types
+
 def filter_field(line):
-    fields = line.strip().split(",")
+    fields = line[0].strip().split(",")
     words = fields[4].split(" ")
+    types = ["Standard", "Dynamic", "Zone", "Server", "Inverse", "DNS"]
+    if words[0] not in types:
+        return ("Error/Unknown operation", 1)
+    return (words[0] + " " + words[1], 1)
+
+def filter_errors_field(line):
+    fields = line[0].strip().split(",")
     # si levano le virgolette ""
     # return (words[2][1:-1], words[3][1:-1], words[4][1:-1], [words[6][1:-1], 1])
-    return (words[0], 1)
+    return (fields[0], 1)
 
 def foreach_batch_function(df, epoch_id):
-    # df.show(2, False)
-    lines_stream = df.rdd.map(list)
-    if not lines_stream.isEmpty():
+    try:
+        lines_stream = df.rdd.map(list)
         filtered_stream = lines_stream.filter(filter_line)
-        clean_stream = filtered_stream.map(filter_field)
-        agg_stream = clean_stream.reduceByKey(lambda a, b: a + b)
-        if not agg_stream.isEmpty():
-            # Get the singleton instance of SparkSession 
-            spark = getSparkSessionInstance()
-            # Convert to DataFrame
-            columns = ["type", "packets"]
-            df = agg_stream.toDF(columns)
-            df.printSchema()
-            df.show(truncate=False)
+        errors_stream = filtered_stream.filter(filter_errors)
 
-            df.write\
-                .format("org.apache.spark.sql.cassandra")\
-                .mode('append')\
-                .options(keyspace="dns", table="info")\
-                .save()
+        clean_stream = filtered_stream.map(filter_field)
+        clean_errors_stream = errors_stream.map(filter_errors_field)
+
+        agg_stream = clean_stream.reduceByKey(lambda a, b: a + b)
+        agg_errors_stream = clean_errors_stream.reduceByKey(lambda a, b: a + b)
+
+        # Get the singleton instance of SparkSession 
+        spark = getSparkSessionInstance()
+        # Convert to DataFrame
+        columns = ["type", "packets"]
+        df = agg_stream.toDF(columns)
+        df.printSchema()
+        df.show(truncate=False)
+
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="info")\
+            .save()
+
+        columns = ["address", "errors"]
+        df = agg_errors_stream.toDF(columns)
+        df.printSchema()
+        df.show(truncate=False)
+
+        df.write\
+            .format("org.apache.spark.sql.cassandra")\
+            .mode('append')\
+            .options(keyspace="dns", table="error")\
+            .save()
+    except:
+        pass
 
 schema = StructType() \
         .add("schema", StringType()) \

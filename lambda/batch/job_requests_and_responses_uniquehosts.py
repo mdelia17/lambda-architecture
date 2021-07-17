@@ -25,7 +25,6 @@ def format_line(line):
 
 def request(line):
         words = line[2].split(" ")
-        # len(words) > 2 va fatto per colpa dell'header
         return words[0] == "Standard"
 
 def line_lookup(line):
@@ -63,8 +62,12 @@ cnames_stream = clear_request_stream.flatMap(lambda line: line)
 
 aggregate_stream = cnames_stream.reduceByKey(lambda a, b: a.union(b))
 
-count_RDD = aggregate_stream.map(lambda line: (line[0], line[1], len(line[1])))
+# i due rdd commentati sono per l'output di tutto il set per ogni riga e non solo della lunghezza
 
-sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False)
+# count_RDD = aggregate_stream.map(lambda line: (line[0], line[1], len(line[1])))
+count_RDD = aggregate_stream.map(lambda line: (line[0], len(line[1])))
+
+# sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False)
+sorted_RDD = count_RDD.sortBy(lambda line: line[1], ascending=False)
 
 sorted_RDD.coalesce(1,True).saveAsTextFile(output_filepath)                  

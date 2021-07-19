@@ -3,10 +3,7 @@ LOAD DATA INPATH 'hdfs://namenode:8020/topics/network-data/partition=0/*' OVERWR
 
 ADD FILE /hive-job/preprocessing_1.py;
 
-CREATE TABLE new_input AS
-	SELECT TRANSFORM(input.fields)
-	    USING 'python3 /hive-job/preprocessing_1.py' AS src, dst, len, num
-	FROM input;
+CREATE TABLE new_input AS SELECT TRANSFORM(input.fields) USING 'python3 /hive-job/preprocessing_1.py' AS src, dst, len, num FROM input;
 
 CREATE VIEW v1 AS
 SELECT i.src, i.dst, SUM(i.len) AS bytes, SUM(i.num) AS tot 
@@ -17,24 +14,38 @@ CREATE VIEW v2 AS
 SELECT v1.dst, v1.src, v1.bytes, v1.tot 
 FROM v1;
 
-CREATE TABLE v3 AS
+CREATE VIEW v3 AS
 SELECT v1.src, v1.dst, v1.bytes, v1.tot, v2.dst as dst_i, v2.src as src_i, v2.bytes as bytes_i, v2.tot as tot_i
 FROM v1 LEFT OUTER JOIN v2 ON v1.src=v2.dst AND v1.dst = v2.src;
 
-SELECT * FROM v3;
+CREATE VIEW v4 AS
+SELECT DISTINCT
+    CASE WHEN src > dst THEN src ELSE dst END as src,
+    CASE WHEN src > dst THEN dst ELSE src END as dst
+FROM v3
+WHERE dst_i IS NOT NULL;
 
--- ADD FILE /hive-job/filter.py;
+CREATE TABLE v5 AS 
+SELECT v4.src, v4.dst, (v3.bytes + v3.bytes_i) as tot_bytes, (v3.tot + v3.tot_i) as tot
+FROM v4 JOIN v3 ON v4.src=v3.src AND v4.dst = v3.dst;
 
--- CREATE TABLE filtered AS
--- 	SELECT TRANSFORM(src, dst, bytes, tot)
--- 	    USING 'python 3 /hive-job/filter.py' AS src, dst, bytes, tot
--- 	FROM v2;
+INSERT into v5 (src, dst, tot_bytes, tot)
+SELECT v3.src, v3.dst, v3.bytes, v3.tot
+FROM v3
+WHERE dst_i IS NULL;
 
--- SELECT * FROM filtered;
+CREATE VIEW output AS
+SELECT src, dst, tot_bytes/tot as average, tot
+FROM v5
+ORDER BY average DESC;
 
-drop table input;
-drop table new_input;
+SELECT * FROM output;
+
+drop TABLE input;
+drop TABLE new_input;
 DROP VIEW v1;
 DROP VIEW v2;
-DROP table v3;
-drop table filtered;
+DROP VIEW v3;
+drop VIEW v4;
+drop TABLE v5;
+drop view output;

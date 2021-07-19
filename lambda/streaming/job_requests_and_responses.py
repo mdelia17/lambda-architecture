@@ -104,7 +104,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="searched_categories")\
+            .options(keyspace="dns_streaming", table="searched_categories")\
             .save()
         # Get the singleton instance of SparkSession
         # spark = getSparkSessionInstance()
@@ -116,7 +116,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="domain_requests_and_responses")\
+            .options(keyspace="dns_streaming", table="domain_requests_and_responses")\
             .save()
     except:
         pass

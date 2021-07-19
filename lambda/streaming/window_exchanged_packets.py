@@ -43,7 +43,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="window_exchanged_packets")\
+            .options(keyspace="dns_streaming", table="window_exchanged_packets")\
             .save()
 
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)

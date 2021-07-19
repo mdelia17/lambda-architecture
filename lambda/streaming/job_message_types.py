@@ -103,7 +103,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="message_types")\
+            .options(keyspace="dns_streaming", table="message_types")\
             .save()
 
         columns = ["address", "errors"]
@@ -114,7 +114,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="errors")\
+            .options(keyspace="dns_streaming", table="errors")\
             .save()
     except:
         pass

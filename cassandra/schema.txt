@@ -1,4 +1,4 @@
----keyspace:dns---
+---keyspace:dns_streaming---
 
 nameservers
  inet address (PK) | counter packets_sent | counter packets_received
@@ -39,3 +39,17 @@ window_byte_sums
 window_message_types
  timestamp start (PK) | timestamp end (PK) | text type (PK) | counter count
 ----------------------+--------------------+----------------+--------------
+
+---keyspace:dns_batch---
+
+hosts
+ inet host (PK)
+ --------------
+
+requests_responses_uniquehosts
+ text type (PK) | text request_response (PK) | int count | set<inet> hosts
+----------------+----------------------------+-----------+----------------
+
+total_avg_bytes
+ inet address_a (PK) | inet address_b (PK) | int total | float avg | int count
+---------------------+---------------------+-----------+-----------+----------

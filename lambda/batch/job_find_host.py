@@ -50,19 +50,37 @@ lines_clean_RDD = lines_RDD.map(lambda a: json.loads(a.strip())["message"])
 
 spark = getSparkSessionInstance()
 
-# df = spark.sql("SELECT * FROM mycatalog.dns.nameserver")
-df = spark.read.table("mycatalog.dns.nameserver")
+df = spark.read.table("mycatalog.dns_streaming.nameservers")
 
 from_df_to_RDD = df.rdd.map(list)
+# print(from_df_to_RDD.collect())
 ns_1_RDD = from_df_to_RDD.map(lambda a: (a[0], "NS"))
+# print(ns_1_RDD.collect())
 
 lst = ns_1_RDD.collect()
 ns_RDD = spark.sparkContext.parallelize(lst)
+# print(ns_RDD.collect())
 
 prepare_1_RDD = lines_clean_RDD.flatMap(prep)
+# print(prepare_1_RDD.collect())
 ns_host_RDD = prepare_1_RDD.reduceByKey(lambda a, _: a)
+# print(ns_host_RDD.collect())
 
 find_host_RDD = ns_host_RDD.leftOuterJoin(ns_RDD)
-host_RDD = find_host_RDD.filter(lambda a: a[1][1] == None).map(lambda a: a[0]).coalesce(1)
+# print(find_host_RDD.collect())
+host_RDD = find_host_RDD.filter(lambda a: a[1][1] == None).map(lambda a: (a[0])).coalesce(1)
+# print(host_RDD.collect())
 
-host_RDD.saveAsTextFile(output_filepath)
+# host_RDD.saveAsTextFile(output_filepath)
+
+spark = getSparkSessionInstance()
+columns = ["host"]
+df = host_RDD.map(lambda x: (x, )).toDF(columns)
+# df = host_RDD.toDF(columns)
+df.show(truncate=False)
+
+df.write\
+    .format("org.apache.spark.sql.cassandra")\
+    .mode('append')\
+    .options(keyspace="dns_batch", table="hosts")\
+    .save()

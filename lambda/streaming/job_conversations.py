@@ -76,7 +76,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns", table="conversations")\
+            .options(keyspace="dns_streaming", table="conversations")\
             .save()
     except: 
         pass

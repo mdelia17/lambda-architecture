@@ -18,6 +18,19 @@ spark = SparkSession \
     .appName("Esercizio-1") \
     .getOrCreate()
 
+def getSparkSessionInstance():
+    if ('sparkSessionSingletonInstance' not in globals()):
+        globals()['sparkSessionSingletonInstance'] = SparkSession\
+            .builder\
+            .appName("SQL Example").master("local[*]")\
+            .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
+            .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
+            .config("spark.cassandra.auth.username", "cassandra")\
+            .config("spark.cassandra.auth.password", "cassandra")\
+            .getOrCreate()
+    return globals()['sparkSessionSingletonInstance']
+
 def format_line(line):
         words = line.strip().split(",")
         # print(line)
@@ -62,12 +75,21 @@ cnames_stream = clear_request_stream.flatMap(lambda line: line)
 
 aggregate_stream = cnames_stream.reduceByKey(lambda a, b: a.union(b))
 
-# i due rdd commentati sono per l'output di tutto il set per ogni riga e non solo della lunghezza
+count_RDD = aggregate_stream.map(lambda line: (line[0][0], line[0][1], len(line[1]), list(line[1])))
+# count_RDD = aggregate_stream.map(lambda line: (line[0], len(line[1])))
+print(count_RDD.collect())
 
-# count_RDD = aggregate_stream.map(lambda line: (line[0], line[1], len(line[1])))
-count_RDD = aggregate_stream.map(lambda line: (line[0], len(line[1])))
+sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False).coalesce(1,True)
 
-# sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False)
-sorted_RDD = count_RDD.sortBy(lambda line: line[1], ascending=False)
+# sorted_RDD.coalesce(1,True).saveAsTextFile(output_filepath)
 
-sorted_RDD.coalesce(1,True).saveAsTextFile(output_filepath)                  
+spark = getSparkSessionInstance()
+columns = ["type", "request_response", "count", "hosts"]
+df = sorted_RDD.toDF(columns)
+df.show(truncate=False)
+
+df.write\
+    .format("org.apache.spark.sql.cassandra")\
+    .mode('append')\
+    .options(keyspace="dns_batch", table="requests_responses_uniquehosts")\
+    .save()       

@@ -13,6 +13,19 @@ input_filepath, output_filepath = args.input_path, args.output_path
 
 spark = SparkSession.builder.appName("Total and Average packet length").getOrCreate()
 
+def getSparkSessionInstance():
+    if ('sparkSessionSingletonInstance' not in globals()):
+        globals()['sparkSessionSingletonInstance'] = SparkSession\
+            .builder\
+            .appName("SQL Example").master("local[*]")\
+            .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
+            .config("spark.cassandra.connection.host", "cassandra-1")\
+            .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
+            .config("spark.cassandra.auth.username", "cassandra")\
+            .config("spark.cassandra.auth.password", "cassandra")\
+            .getOrCreate()
+    return globals()['sparkSessionSingletonInstance']
+
 def parse_line(record):
     line = record.strip().split(",")
     return [line[0], line[1], line[2], int(line[3]), line[4]]
@@ -68,6 +81,19 @@ output_rdd = join_rdd.filter(filter_double_pair).map(total_avg_pair)
 # print(output_rdd.collect())
 
 sorted_rdd = output_rdd.sortBy(lambda line: line[1], ascending=False)
-# print(sorted_rdd.collect())
+print(sorted_rdd.collect())
 
-sorted_rdd.coalesce(1,True).saveAsTextFile(output_filepath)
+final_rdd = sorted_rdd.map(lambda l: [l[0][0], l[0][1], l[1], l[2], l[3]])
+print(final_rdd.collect())
+
+spark = getSparkSessionInstance()
+columns = ["address_a", "address_b", "total", "avg", "count"]
+# df = host_RDD.map(lambda x: (x, )).toDF(columns)
+df = final_rdd.toDF(columns)
+df.show(truncate=False)
+
+df.write\
+    .format("org.apache.spark.sql.cassandra")\
+    .mode('append')\
+    .options(keyspace="dns_batch", table="total_avg_bytes")\
+    .save()

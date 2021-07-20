@@ -2,11 +2,11 @@ CREATE EXTERNAL TABLE input(fields string);
 LOAD DATA INPATH 'hdfs://namenode:8020/topics/network-data/partition=0/*' OVERWRITE INTO TABLE input;
 Select * from input;
 
-ADD FILE /hive-job/preprocessing_2.py;
+ADD FILE /hive/preprocessing_2.py;
 
 CREATE TABLE new_input AS
 	SELECT TRANSFORM(input.fields)
-	    USING 'python3 /hive-job/preprocessing_2.py' AS type, name, ip
+	    USING 'python3 /hive/preprocessing_2.py' AS type, name, ip
 	FROM input;
 
 SELECT * FROM new_input;

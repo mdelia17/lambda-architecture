@@ -1,43 +1,116 @@
-version: '3'
+# version: '3'
 
+# networks:
+#   net-cassandra:
+#     name: net-cassandra
+#     driver: bridge
+
+# services:
+#   cassandra-1:
+#     container_name: 'cassandra-1'
+#     image: "docker.io/strapdata/elassandra:6.8.4.3"
+#     restart: on-failure
+#     networks:
+#       - net-cassandra
+#     environment:
+#       - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
+#       - "MAX_HEAP_SIZE=1200m"
+#       - "HEAP_NEWSIZE=300m"
+#       - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+#       - "DEBUG=true"
+#     cap_add:
+#       - IPC_LOCK
+#     ulimits:
+#       memlock: -1
+#     mem_limit: 2000m
+#     ports:
+#       - "9042:9042"
+#       - "9200:9200"
+
+#   cassandra-2:
+#     container_name: 'cassandra-2'
+#     image: "docker.io/strapdata/elassandra:6.8.4.3"
+#     restart: on-failure
+#     networks:
+#       - net-cassandra
+#     environment:
+#       - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
+#       - "MAX_HEAP_SIZE=1200m"
+#       - "HEAP_NEWSIZE=300m"
+#       - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+#       - "CASSANDRA_SEEDS=cassandra-1"
+#       - "DEBUG=true"
+#     links:
+#       - cassandra-1
+#     cap_add:
+#       - IPC_LOCK
+#     ulimits:
+#       memlock: -1
+#     mem_limit: 2000m
+
+#   kibana:
+#     container_name: 'kibana'
+#     image: docker.elastic.co/kibana/kibana-oss:6.8.4
+#     restart: on-failure
+#     networks:
+#       - net-cassandra
+#     environment:
+#       - "ELASTICSEARCH_URL=http://cassandra-1:9200"
+#     ports:
+#       - "5601:5601"
+#     mem_limit: 500m
+
+
+version: '3'
+ 
 networks:
   net-cassandra:
     name: net-cassandra
     driver: bridge
-
+ 
 services:
   cassandra-1:
     container_name: 'cassandra-1'
     image: "docker.io/strapdata/elassandra:6.8.4.3"
     restart: on-failure
+    ulimits:
+    nofile:
+    soft: "65536"
+    hard: "65536"
     networks:
       - net-cassandra
     environment:
+      - ES_JAVA_OPTS="-Xmx2g -Xms2g"
       - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
-      - "MAX_HEAP_SIZE=1200m"
-      - "HEAP_NEWSIZE=300m"
-      - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+      - "MAX_HEAP_SIZE=1g"
+      - "HEAP_NEWSIZE=1g"
+      - "CASSANDRA_CGROUP_MEMORY_LIMIT=false"
       - "DEBUG=true"
     cap_add:
       - IPC_LOCK
     ulimits:
-      memlock: -1
+    memlock: -1
     mem_limit: 2000m
     ports:
       - "9042:9042"
       - "9200:9200"
-
+ 
   cassandra-2:
     container_name: 'cassandra-2'
     image: "docker.io/strapdata/elassandra:6.8.4.3"
     restart: on-failure
+    ulimits:
+    nofile:
+    soft: "65536"
+    hard: "65536"
     networks:
       - net-cassandra
     environment:
+      - ES_JAVA_OPTS="-Xmx2g -Xms2g"
       - "JVM_OPTS=-Dcassandra.custom_query_handler_class=org.elassandra.index.ElasticQueryHandler"
-      - "MAX_HEAP_SIZE=1200m"
-      - "HEAP_NEWSIZE=300m"
-      - "CASSANDRA_CGROUP_MEMORY_LIMIT=true"
+      - "MAX_HEAP_SIZE=1g"
+      - "HEAP_NEWSIZE=1g"
+      - "CASSANDRA_CGROUP_MEMORY_LIMIT=false"
       - "CASSANDRA_SEEDS=cassandra-1"
       - "DEBUG=true"
     links:
@@ -45,9 +118,9 @@ services:
     cap_add:
       - IPC_LOCK
     ulimits:
-      memlock: -1
+    memlock: -1
     mem_limit: 2000m
-
+ 
   kibana:
     container_name: 'kibana'
     image: docker.elastic.co/kibana/kibana-oss:6.8.4
@@ -57,5 +130,5 @@ services:
     environment:
       - "ELASTICSEARCH_URL=http://cassandra-1:9200"
     ports:
-      - "5601:5601"
+     - "5601:5601"
     mem_limit: 500m

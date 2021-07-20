@@ -1,9 +1,9 @@
 CREATE EXTERNAL TABLE input(fields string);
 LOAD DATA INPATH 'hdfs://namenode:8020/topics/network-data/partition=0/*' OVERWRITE INTO TABLE input;
 
-ADD FILE /hive-job/preprocessing_1.py;
+ADD FILE /hive/preprocessing_1.py;
 
-CREATE TABLE new_input AS SELECT TRANSFORM(input.fields) USING 'python3 /hive-job/preprocessing_1.py' AS src, dst, len, num FROM input;
+CREATE TABLE new_input AS SELECT TRANSFORM(input.fields) USING 'python3 /hive/preprocessing_1.py' AS src, dst, len, num FROM input;
 
 CREATE VIEW v1 AS
 SELECT i.src, i.dst, SUM(i.len) AS bytes, SUM(i.num) AS tot 

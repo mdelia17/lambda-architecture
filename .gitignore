@@ -10,3 +10,9 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+### .pem ###
+*.pem
+
+### ec2_commands.md ###
+ec2_commands.md

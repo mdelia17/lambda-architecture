@@ -32,7 +32,7 @@ window_exchanged_packets
  timestamp start (PK) | timestamp end (PK) | inet address (PK) | counter packets_sent | counter packets_received
 ----------------------+--------------------+----------------+-------------------------+-------------------------
 
-window_byte_sums
+window_bytes_packets
  timestamp start (PK) | timestamp end (PK) | counter sum | counter count
 ----------------------+--------------------+-------------+-------------- 
 

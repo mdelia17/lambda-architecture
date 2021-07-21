@@ -2,7 +2,7 @@
 
 usage()
 {
-	echo 'Usage: start-streaming.sh <streaming job name>'
+	echo 'Usage: start-job-streaming.sh <streaming job name>'
 	exit 1
 }
 

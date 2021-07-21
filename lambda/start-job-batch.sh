@@ -2,7 +2,7 @@
 
 usage()
 {
-	echo 'Usage: start-batch.sh <batch job name>'
+	echo 'Usage: start-job-batch.sh <batch job name>'
 	exit 1
 }
 

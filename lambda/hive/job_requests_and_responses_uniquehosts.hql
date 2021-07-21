@@ -1,5 +1,5 @@
 CREATE EXTERNAL TABLE input(fields string);
-LOAD DATA INPATH 'hdfs://namenode:8020/topics/network-data/partition=0/*' OVERWRITE INTO TABLE input;
+LOAD DATA INPATH 'hdfs://namenode:8020/user/hive/warehouse/data/*' OVERWRITE INTO TABLE input;
 Select * from input;
 
 ADD FILE /hive/preprocessing_2.py;

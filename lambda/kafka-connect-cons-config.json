@@ -4,7 +4,7 @@
     "tasks.max": "1",
     "topics": "network-data",
     "hdfs.url": "hdfs://namenode:8020",
-    "flush.size": "99",
+    "flush.size": "999",
     "confluent.topic.bootstrap.servers": "broker:29092",
     "format.class": "io.confluent.connect.hdfs3.json.JsonFormat"
 }

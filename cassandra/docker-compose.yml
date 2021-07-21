@@ -78,9 +78,9 @@ services:
     image: "docker.io/strapdata/elassandra:6.8.4.3"
     restart: on-failure
     ulimits:
-    nofile:
-    soft: "65536"
-    hard: "65536"
+      nofile:
+        soft: "65536"
+        hard: "65536"
     networks:
       - net-cassandra
     environment:
@@ -93,7 +93,7 @@ services:
     cap_add:
       - IPC_LOCK
     ulimits:
-    memlock: -1
+      memlock: -1
     mem_limit: 2000m
     ports:
       - "9042:9042"
@@ -104,9 +104,9 @@ services:
     image: "docker.io/strapdata/elassandra:6.8.4.3"
     restart: on-failure
     ulimits:
-    nofile:
-    soft: "65536"
-    hard: "65536"
+      nofile:
+        soft: "65536"
+        hard: "65536"
     networks:
       - net-cassandra
     environment:
@@ -122,7 +122,7 @@ services:
     cap_add:
       - IPC_LOCK
     ulimits:
-    memlock: -1
+      memlock: -1
     mem_limit: 2000m
  
   kibana:

@@ -22,7 +22,7 @@ def foreach_batch_function(df, epoch_id):
         aggregate_stream = lines_stream.reduceByKey(lambda a, b: [a[0]+b[0], a[1]+b[1]]) 
         sum_avg_stream = aggregate_stream.map(lambda line: (line[0][0], line[0][1], line[1][0], line[1][1]))
         getSparkSessionInstance()
-        columns = ["start", "end", "sum", "count"]
+        columns = ["start", "end", "bytes", "packets"]
         df = sum_avg_stream.toDF(columns)
         df.printSchema()
         df.show(df.count(), False)
@@ -30,7 +30,7 @@ def foreach_batch_function(df, epoch_id):
         df.write\
             .format("org.apache.spark.sql.cassandra")\
             .mode('append')\
-            .options(keyspace="dns_streaming", table="window_byte_sums")\
+            .options(keyspace="dns_streaming", table="window_bytes_packets")\
             .save()
         # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
     except: 

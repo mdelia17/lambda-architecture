@@ -45,7 +45,8 @@ def min_addr_pair(addr1, addr2):
     for i in range(len(l1)):
         if(int(l1[i]) < int(l2[i])):
             return True
-    return False
+        elif(int(l1[i]) > int(l2[i])):
+            return False
 
 # funzione che calcola il totale e la media dei byte scambiati tra ogni coppia di indirizzi
 def total_avg_pair(line):
@@ -81,10 +82,12 @@ output_rdd = join_rdd.filter(filter_double_pair).map(total_avg_pair)
 # print(output_rdd.collect())
 
 sorted_rdd = output_rdd.sortBy(lambda line: line[1], ascending=False)
-print(sorted_rdd.collect())
+# print(sorted_rdd.collect())
 
 final_rdd = sorted_rdd.map(lambda l: [l[0][0], l[0][1], l[1], l[2], l[3]])
-print(final_rdd.collect())
+# print(final_rdd.collect())
+
+# final_RDD.coalesce(1,True).saveAsTextFile(output_filepath)
 
 spark = getSparkSessionInstance()
 columns = ["address_a", "address_b", "total", "avg", "count"]

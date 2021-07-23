@@ -10,6 +10,8 @@ def getSparkSessionInstance():
             .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
             .config("spark.cassandra.connection.host", "cassandra-1")\
             .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
+            .config("spark.cassandra.auth.username", "cassandra")\
+            .config("spark.cassandra.auth.password", "cassandra")\
             .getOrCreate()
     return globals()['sparkSessionSingletonInstance']
 
@@ -24,7 +26,7 @@ def foreach_batch_function(df, epoch_id):
         getSparkSessionInstance()
         columns = ["start", "end", "bytes", "packets"]
         df = sum_avg_stream.toDF(columns)
-        df.printSchema()
+        #df.printSchema()
         df.show(df.count(), False)
 
         df.write\
@@ -53,7 +55,7 @@ lines_DF = spark \
     .load()
 
 # spark.sql("SET -v").show(n=200, truncate=False)
-lines_DF.printSchema()
+#lines_DF.printSchema()
 
 schema = StructType() \
         .add("schema", StringType()) \
@@ -62,15 +64,15 @@ schema = StructType() \
 lines_DF = lines_DF\
     .selectExpr("cast(value as string)", "timestamp")\
 
-lines_DF.printSchema()
+#lines_DF.printSchema()
 
 lines_DF = lines_DF\
     .select(from_json(lines_DF.value, schema), "timestamp")\
     .select("from_json(value).payload.message", "timestamp")\
 
-lines_DF.printSchema()
+# lines_DF.printSchema()
 lines_DF = lines_DF.select(split(lines_DF.message, ',').alias('fields'), lines_DF.timestamp)
-lines_DF.printSchema()
+# lines_DF.printSchema()
 
 # Group the data by window and word and compute the count of each group
 windowedCounts = lines_DF\
@@ -79,7 +81,7 @@ windowedCounts = lines_DF\
         lines_DF.fields)\
     .count()
 
-windowedCounts.printSchema()
+# windowedCounts.printSchema()
 
 windowedCounts = windowedCounts\
     .writeStream\

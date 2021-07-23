@@ -37,7 +37,7 @@ def foreach_batch_function(df, epoch_id):
         spark = getSparkSessionInstance()
         columns = ["start", "end", "address", "packets_sent", "packets_received"]
         df = reduced_rdd.toDF(columns)
-        df.printSchema()
+        # df.printSchema()
         df.show(df.count(), False)
 
         df.write\

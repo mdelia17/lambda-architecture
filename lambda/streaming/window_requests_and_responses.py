@@ -24,7 +24,10 @@ def filter_field(line):
     if info[2] != "response":
         url = info[-1]
         domain = url.strip().split(".")
-        string = domain[-2] + "." + domain[-1]
+        if len(domain) > 1:
+            string = domain[-2] + "." + domain[-1]
+        else:
+            string = domain[-1]
         return [[(line[0][0], line[0][1], "A", string), 1]]
     else:
         l = []
@@ -51,7 +54,7 @@ def foreach_batch_function(df, epoch_id):
         spark = getSparkSessionInstance()
         columns = ["start", "end", "type", "request_response", "requests"]
         df = reduced_rdd.toDF(columns)
-        df.printSchema()
+        # df.printSchema()
         df.show(df.count(), False)
 
         df.write\

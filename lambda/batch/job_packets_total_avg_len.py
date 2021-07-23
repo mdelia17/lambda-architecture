@@ -81,13 +81,13 @@ join_rdd = reduced_rdd.leftOuterJoin(inversed_reduced_rdd)
 output_rdd = join_rdd.filter(filter_double_pair).map(total_avg_pair)
 # print(output_rdd.collect())
 
-sorted_rdd = output_rdd.sortBy(lambda line: line[1], ascending=False)
+# sorted_rdd = output_rdd.sortBy(lambda line: line[1], ascending=False)
 # print(sorted_rdd.collect())
 
-final_rdd = sorted_rdd.map(lambda l: [l[0][0], l[0][1], l[1], l[2], l[3]])
+final_rdd = output_rdd.map(lambda l: [l[0][0], l[0][1], l[1], l[2], l[3]])
 # print(final_rdd.collect())
 
-# final_RDD.coalesce(1,True).saveAsTextFile(output_filepath)
+# final_rdd.coalesce(1,True).saveAsTextFile(output_filepath)
 
 spark = getSparkSessionInstance()
 columns = ["address_a", "address_b", "total", "avg", "count"]

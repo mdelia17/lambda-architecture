@@ -79,13 +79,13 @@ count_RDD = aggregate_stream.map(lambda line: (line[0][0], line[0][1], len(line[
 # count_RDD = aggregate_stream.map(lambda line: (line[0], len(line[1])))
 # print(count_RDD.collect())
 
-sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False)
+# sorted_RDD = count_RDD.sortBy(lambda line: line[2], ascending=False)
 
 # sorted_RDD.coalesce(1,True).saveAsTextFile(output_filepath)
 
 spark = getSparkSessionInstance()
 columns = ["type", "request_response", "count", "hosts"]
-df = sorted_RDD.toDF(columns)
+df = count_RDD.toDF(columns)
 df.show(truncate=False)
 
 df.write\

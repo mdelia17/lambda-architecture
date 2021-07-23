@@ -1,9 +1,16 @@
+import sys
+from pyspark import SparkContext
+from pyspark.streaming import StreamingContext
+from pyspark.sql import Row, SparkSession
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 import re
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode, split, from_json
 from pyspark.sql.types import *
-from cassandra.cluster import Cluster
 
 # initialize the SparkSession
 spark = SparkSession \
@@ -75,7 +82,7 @@ def foreach_batch_function(df, epoch_id):
     # df.show(2, False)
     try:
         lines_stream = df.rdd.map(list) 
-
+        
         clean_stream = lines_stream.map(filter_field)
 
         filtered_1_6_7_stream = clean_stream.filter(filter_1_6_7_line)
@@ -103,25 +110,44 @@ def foreach_batch_function(df, epoch_id):
         # ip_stats_stream = ip_stats_stream.reduceByKey(lambda a,b: [a[0]+b[0], a[1]+b[1]])
         # final_5_stream = ip_stats_stream.map(lambda a: (a[0], a[1][0], a[1][1]))
         # print(ip_stats_stream.collect())
-
         final_stream = spark.sparkContext.union([final_1_6_7_stream, count_packet_2_stream, ip_stats_stream])
 
         final_stream = final_stream.reduceByKey(lambda a,b: [a[0] + b[0], a[1] + b[1]]).map(lambda l: (l[0], l[1][0], l[1][1]))
         
-        hosts = ['cassandra-1']
-        port = 9042
+        # CREATE KEYSPACE IF NOT EXISTS dns WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+        # CREATE TABLE IF NOT EXISTS dns.name (address text PRIMARY KEY, packets_sent int, packets_received int);
+        # SELECT * FROM dns.name;
+        # INSERT INTO dns.name (address, packets_sent, packets_received) VALUES ('192.168.1.10', 1, 1);
+        # TRUNCATE dns.name; 
 
-        # this object models a Cassandra cluster
-        cluster = Cluster(contact_points=hosts, port=port)
-
-        # initialize a session to interact with the cluster:
-        session = cluster.connect(keyspace="dns_streaming",
-                                wait_for_all_pools=True)
         for elem in final_stream.collect():
-            # run a query
-            session.execute("INSERT INTO dns_streaming.nameservers (address, packets_sent, packets_received) VALUES (%s, %s, %s)", (elem[0], elem[1], elem[2]))
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT packets_sent, packets_received FROM dns.name WHERE address=?")
+            rows = session.execute(address_lookup_stmt, [str(elem[0])])
+            # fa la insert dell'elem corrente, se già esiste nel db non viene fatto nulla
+            session.execute("INSERT INTO dns.name (address, packets_sent, packets_received) VALUES (%s, %s, %s)", (str(elem[0]), int(elem[1]), int(elem[2])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row.packets_received)
+                new_packets_sent = row.packets_sent + int(elem[1])
+                # print(new_packets_sent)
+                new_packets_received = row.packets_received + int(elem[2])
+                # print(new_packets_received)
+                session.execute("INSERT INTO dns.name (address, packets_sent, packets_received) VALUES (%s, %s, %s)", (str(elem[0]), new_packets_sent, new_packets_received))
+            
     except:
         pass
+
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

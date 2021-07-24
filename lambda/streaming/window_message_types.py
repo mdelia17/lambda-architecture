@@ -56,7 +56,7 @@ spark.sparkContext.setLogLevel("ERROR")
 lines_DF = spark \
     .readStream \
     .format("kafka") \
-    .option("kafka.bootstrap.servers", "localhost:9092") \
+    .option("kafka.bootstrap.servers", "broker:29092") \
     .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()

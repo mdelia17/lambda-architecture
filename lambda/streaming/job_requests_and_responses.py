@@ -70,11 +70,12 @@ def reg_fun(line):
 def famous(line):
     name = line[0][1]
     number = line[1]
-    d = {"google":"search", "youtube":"social network", "facebook":"social network", "instagram":"social network", "akamai":"cdn", "porn":"danger", "amazon":"e-commerce", "microsoft":"tech", "oracle":"tech"}
+    d = {"search": ["google", "msn", "yahoo", "bing", "ucweb", "scorecardresearch"], "tech": ["apple", "cloud", "windows", "cloudfront", "amazonaws", "android", "ksmobile", "microsoft", "msftncsi", "flurry", "gmail", "appsflyer", "doubleclick", "truecaller"], "social": ["facebook", "whatsapp", "youtube", "skype", "twitter", "instagram"], "e-commerce": ["amazon"], "cdn": ["akamai", "fbcdn"], "danger": ["porn", "virus"]}
     for i in d:
-        if i in name:
-            return (d[i],number)
-    return ("other",number)
+        for x in d[i]:
+            if x in name:
+                return (i, number)
+    return ("other", number)
 
 def foreach_batch_function(df, epoch_id):
     try:

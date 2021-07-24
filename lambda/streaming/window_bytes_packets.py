@@ -1,19 +1,10 @@
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, from_json, window
+import sys
+from pyspark.streaming import StreamingContext
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 from pyspark.sql.types import *
-
-def getSparkSessionInstance():
-    if ('sparkSessionSingletonInstance' not in globals()):
-        globals()['sparkSessionSingletonInstance'] = SparkSession\
-            .builder\
-            .appName("SQL Example").master("local[*]")\
-            .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cassandra-1")\
-            .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
-            .config("spark.cassandra.auth.username", "cassandra")\
-            .config("spark.cassandra.auth.password", "cassandra")\
-            .getOrCreate()
-    return globals()['sparkSessionSingletonInstance']
 
 def foreach_batch_function(df, epoch_id):
     try: 
@@ -23,18 +14,21 @@ def foreach_batch_function(df, epoch_id):
         lines_stream = lines_stream.map(lambda line: ((line[0][0], line[0][1]), [int(line[1][3]), line[2]]))
         aggregate_stream = lines_stream.reduceByKey(lambda a, b: [a[0]+b[0], a[1]+b[1]]) 
         sum_avg_stream = aggregate_stream.map(lambda line: (line[0][0], line[0][1], line[1][0], line[1][1]))
-        getSparkSessionInstance()
-        columns = ["start", "end", "bytes", "packets"]
-        df = sum_avg_stream.toDF(columns)
-        #df.printSchema()
-        df.show(df.count(), False)
-
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns_streaming", table="window_bytes_packets")\
-            .save()
-        # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
+        
+        for elem in sum_avg_stream.collect():
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT bytes, packets FROM dns_streaming.window_bytes_packets WHERE start=? AND end=?")
+            rows = session.execute(address_lookup_stmt, [elem[0], elem[1]])
+            # fa la insert dell'elem corrente, se già esiste nel db viene sovrascritto
+            session.execute("INSERT INTO dns_streaming.window_bytes_packets (start, end, bytes, packets) VALUES (%s, %s, %s, %s)", (elem[0], elem[1], int(elem[2]), int(elem[3])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row)
+                new_bytes = row.bytes + int(elem[2])
+                new_packets = row.packets + int(elem[3])
+                # print(new_count)
+                session.execute("INSERT INTO dns_streaming.window_bytes_packets (start, end, bytes, packets) VALUES (%s, %s, %s, %s)", (elem[0], elem[1], new_bytes, new_packets))
     except: 
         pass
 
@@ -54,8 +48,15 @@ lines_DF = spark \
     .option("startingOffsets","latest")\
     .load()
 
-# spark.sql("SET -v").show(n=200, truncate=False)
-#lines_DF.printSchema()
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns_streaming",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

@@ -1,6 +1,9 @@
-import re
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, from_json
+import sys
+from pyspark.streaming import StreamingContext
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 from pyspark.sql.types import *
 
 # initialize the SparkSession
@@ -95,23 +98,28 @@ def foreach_batch_function(df, epoch_id):
         final_famous_stream = famous_stream.reduceByKey(lambda a, b: a + b)
         # print(final_famous_stream.collect())
         # Get the singleton instance of SparkSession
+        
+        for elem in final_famous_stream.collect():
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT requests FROM dns_streaming.searched_categories WHERE category=?")
+            rows = session.execute(address_lookup_stmt, [elem[0]])
+            # fa la insert dell'elem corrente, se già esiste nel db viene sovrascritto
+            session.execute("INSERT INTO dns_streaming.searched_categories (category, requests) VALUES (%s, %s)", (elem[0], int(elem[1])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row)
+                new_requests = row.requests + int(elem[1])
+                # print(new_count)
+                session.execute("INSERT INTO dns_streaming.searched_categories (category, requests) VALUES (%s, %s)", (elem[0], new_requests))
+
         getSparkSessionInstance()
-        # Convert to DataFrame
-        columns = ["category", "requests"]
-        df = final_famous_stream.toDF(columns)
-        df.printSchema()
-        df.show(truncate=False)
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns_streaming", table="searched_categories")\
-            .save()
         # Get the singleton instance of SparkSession
         # spark = getSparkSessionInstance()
         # Convert to DataFrame
         columns = ["request_response", "type", "requests"]
         df = domain_clean_stream.toDF(columns)
-        df.printSchema()
+        # df.printSchema()
         df.show(truncate=False)
         df.write\
             .format("org.apache.spark.sql.cassandra")\
@@ -120,6 +128,16 @@ def foreach_batch_function(df, epoch_id):
             .save()
     except:
         pass
+
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns_streaming",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

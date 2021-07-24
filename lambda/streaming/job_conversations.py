@@ -1,4 +1,3 @@
-import re
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode, split, from_json
 from pyspark.sql.types import *

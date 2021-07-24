@@ -1,6 +1,9 @@
-import re
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, from_json
+import sys
+from pyspark.streaming import StreamingContext
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 from pyspark.sql.types import *
 
 # initialize the SparkSession
@@ -33,26 +36,6 @@ def getSparkSessionInstance():
             .config("spark.cassandra.auth.password", "cassandra")\
             .getOrCreate()
     return globals()['sparkSessionSingletonInstance']
-
-def process(time, rdd):
-    try:
-        # Get the singleton instance of SparkSession 
-        spark = getSparkSessionInstance()
-        # Convert to DataFrame
-        columns = ["type", "packets"]
-        df = rdd.toDF(columns)
-        df.printSchema()
-        df.show(truncate=False)
-
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns", table="info")\
-            .save()
-
-        spark.sql("SELECT * FROM mycatalog.dns.info").show(truncate=False)
-    except:
-        pass
 
 def filter_line(line): 
     fields = line[0].strip().split(",")
@@ -91,13 +74,27 @@ def foreach_batch_function(df, epoch_id):
 
         agg_stream = clean_stream.reduceByKey(lambda a, b: a + b)
         agg_errors_stream = clean_errors_stream.reduceByKey(lambda a, b: a + b)
-
+        
+        for elem in agg_errors_stream.collect():
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT errors  FROM dns_streaming.errors WHERE address=?")
+            rows = session.execute(address_lookup_stmt, [elem[0]])
+            # fa la insert dell'elem corrente, se già esiste nel db viene sovrascritto
+            session.execute("INSERT INTO dns_streaming.errors (address, errors) VALUES (%s, %s)", (elem[0], int(elem[1])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row)
+                new_errors = row.errors + int(elem[1])
+                # print(new_count)
+                session.execute("INSERT INTO dns_streaming.errors (address, errors) VALUES (%s, %s)", (elem[0], new_errors))
+        
         # Get the singleton instance of SparkSession 
         spark = getSparkSessionInstance()
         # Convert to DataFrame
         columns = ["type", "packets"]
         df = agg_stream.toDF(columns)
-        df.printSchema()
+        # df.printSchema()
         df.show(truncate=False)
 
         df.write\
@@ -106,18 +103,18 @@ def foreach_batch_function(df, epoch_id):
             .options(keyspace="dns_streaming", table="message_types")\
             .save()
 
-        columns = ["address", "errors"]
-        df = agg_errors_stream.toDF(columns)
-        df.printSchema()
-        df.show(truncate=False)
-
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns_streaming", table="errors")\
-            .save()
     except:
         pass
+
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns_streaming",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

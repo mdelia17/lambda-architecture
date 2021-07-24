@@ -1,7 +1,9 @@
-import re
-
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, from_json
+import sys
+from pyspark.streaming import StreamingContext
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 from pyspark.sql.types import *
 
 # initialize the SparkSession
@@ -21,19 +23,6 @@ lines_DF = spark \
     .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
-
-def getSparkSessionInstance():
-    if ('sparkSessionSingletonInstance' not in globals()):
-        globals()['sparkSessionSingletonInstance'] = SparkSession\
-            .builder\
-            .appName("SQL Example").master("local[*]")\
-            .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cassandra-1")\
-            .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
-            .config("spark.cassandra.auth.username", "cassandra")\
-            .config("spark.cassandra.auth.password", "cassandra")\
-            .getOrCreate()
-    return globals()['sparkSessionSingletonInstance']
 
 def filter_field(line):
     words = line[0].strip().split(",")
@@ -87,7 +76,7 @@ def foreach_batch_function(df, epoch_id):
     # df.show(2, False)
     try:
         lines_stream = df.rdd.map(list) 
-
+        
         clean_stream = lines_stream.map(filter_field)
 
         filtered_1_6_7_stream = clean_stream.filter(filter_1_6_7_line)
@@ -115,27 +104,38 @@ def foreach_batch_function(df, epoch_id):
         # ip_stats_stream = ip_stats_stream.reduceByKey(lambda a,b: [a[0]+b[0], a[1]+b[1]])
         # final_5_stream = ip_stats_stream.map(lambda a: (a[0], a[1][0], a[1][1]))
         # print(ip_stats_stream.collect())
-
-        spark = getSparkSessionInstance()
-
         final_stream = spark.sparkContext.union([final_1_6_7_stream, count_packet_2_stream, ip_stats_stream])
 
         final_stream = final_stream.reduceByKey(lambda a,b: [a[0] + b[0], a[1] + b[1]]).map(lambda l: (l[0], l[1][0], l[1][1]))
 
-        # print(final_stream.collect())
-        # Convert to DataFrame
-        columns = ["address", "packets_sent", "packets_received"]
-        df = final_stream.toDF(columns)
-        # df.printSchema()
-        df.show(truncate=False)
-
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns_streaming", table="nameservers")\
-            .save()
+        for elem in final_stream.collect():
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT packets_sent, packets_received FROM dns_streaming.nameservers WHERE address=?")
+            rows = session.execute(address_lookup_stmt, [str(elem[0])])
+            # fa la insert dell'elem corrente, se già esiste nel db viene sovrascritto
+            session.execute("INSERT INTO dns_streaming.nameservers (address, packets_sent, packets_received) VALUES (%s, %s, %s)", (str(elem[0]), int(elem[1]), int(elem[2])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row.packets_received)
+                new_packets_sent = row.packets_sent + int(elem[1])
+                # print(new_packets_sent)
+                new_packets_received = row.packets_received + int(elem[2])
+                # print(new_packets_received)
+                session.execute("INSERT INTO dns_streaming.nameservers (address, packets_sent, packets_received) VALUES (%s, %s, %s)", (str(elem[0]), new_packets_sent, new_packets_received))
+            
     except:
         pass
+
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns_streaming",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

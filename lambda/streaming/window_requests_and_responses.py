@@ -1,19 +1,11 @@
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import explode, split, from_json, window
+import sys
+from pyspark.streaming import StreamingContext
+from pyspark import *
+from pyspark.sql import *
+from pyspark.sql.functions import *
+from cassandra.cluster import Cluster
 from pyspark.sql.types import *
 
-def getSparkSessionInstance():
-    if ('sparkSessionSingletonInstance' not in globals()):
-        globals()['sparkSessionSingletonInstance'] = SparkSession\
-            .builder\
-            .appName("SQL Example").master("local[*]")\
-            .config("spark.sql.catalog.mycatalog", "com.datastax.spark.connector.datasource.CassandraCatalog")\
-            .config("spark.cassandra.connection.host", "cassandra-1")\
-            .config("spark.sql.extensions", "com.datastax.spark.connector.CassandraSparkExtensions")\
-            .config("spark.cassandra.auth.username", "cassandra")\
-            .config("spark.cassandra.auth.password", "cassandra")\
-            .getOrCreate()
-    return globals()['sparkSessionSingletonInstance']
 
 def filter_std_query(line):
     info = line[1][4].strip().split(" ")
@@ -50,20 +42,20 @@ def foreach_batch_function(df, epoch_id):
 
         reduced_rdd = flatten_rdd.reduceByKey(lambda a,b: a + b).map(lambda l: [l[0][0], l[0][1], l[0][2], l[0][3], l[1]])
         # print(reduced_rdd.collect())
-
-        spark = getSparkSessionInstance()
-        columns = ["start", "end", "type", "request_response", "requests"]
-        df = reduced_rdd.toDF(columns)
-        # df.printSchema()
-        df.show(df.count(), False)
-
-        df.write\
-            .format("org.apache.spark.sql.cassandra")\
-            .mode('append')\
-            .options(keyspace="dns_streaming", table="window_domain_requests_and_responses")\
-            .save()
-
-        # spark.sql("SELECT * FROM mycatalog.dns.nameserver").show(truncate=False)
+        
+        for elem in reduced_rdd.collect():
+            print(elem)
+            # per ogni elem viene fatta la query e si ottengono tutte le righe che soddisfano la clausola where (è al massimo una perché la query è fatta sulla chiave)
+            address_lookup_stmt = session.prepare("SELECT requests FROM dns_streaming.window_domain_requests_and_responses WHERE start=? AND end=? AND type=? AND request_response=?")
+            rows = session.execute(address_lookup_stmt, [elem[0], elem[1], elem[2], elem[3]])
+            # fa la insert dell'elem corrente, se già esiste nel db viene sovrascritto
+            session.execute("INSERT INTO dns_streaming.window_domain_requests_and_responses (start, end, type, request_response, requests) VALUES (%s, %s, %s, %s, %s)", (elem[0], elem[1], elem[2], elem[3], int(elem[4])))
+            # se l'elem stava nel db viene fatto un inserimento con i campi aggiornati
+            for row in rows: 
+                # print(row)
+                new_requests = row.requests + int(elem[4])
+                # print(new_count)
+                session.execute("INSERT INTO dns_streaming.window_domain_requests_and_responses (start, end, type, request_response, requests) VALUES (%s, %s, %s, %s, %s)", (elem[0], elem[1], elem[2], elem[3], new_requests))
     except: 
         pass
 
@@ -82,7 +74,16 @@ lines_DF = spark \
     .option("subscribe", "network-data") \
     .option("startingOffsets","latest")\
     .load()
-# lines_DF.printSchema()
+    
+hosts = ['cassandra-1']
+port = 9042
+
+# this object models a Cassandra cluster
+cluster = Cluster(contact_points=hosts, port=port)
+
+# initialize a session to interact with the cluster:
+session = cluster.connect(keyspace="dns_streaming",
+                        wait_for_all_pools=True)
 
 schema = StructType() \
         .add("schema", StringType()) \

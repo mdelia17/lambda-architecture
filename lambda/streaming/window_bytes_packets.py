@@ -87,7 +87,7 @@ windowedCounts = lines_DF\
 windowedCounts = windowedCounts\
     .writeStream\
     .outputMode('update')\
-    .option("checkpointLocation", "file:///tmp/window_byte_sums")\
+    .option("checkpointLocation", "file:///tmp/window_bytes_packets")\
     .foreachBatch(foreach_batch_function)\
     .start()  \
     .awaitTermination()

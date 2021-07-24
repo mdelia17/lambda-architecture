@@ -1,12 +1,12 @@
 ---keyspace:dns_streaming---
 
 nameservers
- inet address (PK) | counter packets_sent | counter packets_received
--------------------+----------------------+-------------------------
+ inet address (PK) | int packets_sent | int packets_received
+-------------------+----------------------+-----------------
 
 searched_categories
- text category (PK) | counter requests
-------------------+-----------------
+ text category (PK) | int requests
+------------------+---------------
 
 message_types
  text type (PK) | counter packets
@@ -14,31 +14,31 @@ message_types
 
 conversations
  tuple<text,text,text> conversation_id (PK) | list<text> messages
---------------------------------+--------------------
+--------------------------------+--------------------------------
 
 domain_requests_and_responses
  text request_response (PK) | text type (PK) | counter requests
-------------------+----------------+-----------------
+------------------+----------------+---------------------------
 
 errors
- inet address (PK) | counter errors
--------------------+---------------
+ inet address (PK) | int errors
+-------------------+-----------
 
 window_domain_requests_and_responses
- timestamp start (PK) | timestamp end (PK) | text type (PK) | text request_response (PK) | counter requests
-----------------------+--------------------+----------------+------------------+-----------------
+ timestamp start (PK) | timestamp end (PK) | text type (PK) | text request_response (PK) | int requests
+----------------------+--------------------+----------------+------------------+-----------------------
 
 window_exchanged_packets
- timestamp start (PK) | timestamp end (PK) | inet address (PK) | counter packets_sent | counter packets_received
-----------------------+--------------------+----------------+-------------------------+-------------------------
+ timestamp start (PK) | timestamp end (PK) | inet address (PK) | int packets_sent | int packets_received
+----------------------+--------------------+----------------+-------------------------+-----------------
 
 window_bytes_packets
- timestamp start (PK) | timestamp end (PK) | counter sum | counter count
-----------------------+--------------------+-------------+-------------- 
+ timestamp start (PK) | timestamp end (PK) | int bytes | int packets
+----------------------+--------------------+-------------+---------- 
 
 window_message_types
- timestamp start (PK) | timestamp end (PK) | text type (PK) | counter count
-----------------------+--------------------+----------------+--------------
+ timestamp start (PK) | timestamp end (PK) | text type (PK) | int count
+----------------------+--------------------+----------------+----------
 
 ---keyspace:dns_batch---
 

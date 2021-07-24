@@ -1,10 +1,12 @@
+#!/bin/bash
+
 curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/batch_hosts -d'{"settings":{"keyspace":"dns_batch"},"mappings":{"hosts":{"properties": {"host": {"type": "ip","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"}}}}}'
 
 curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/batch_total_avg_bytes -d'{"settings":{"keyspace":"dns_batch"},"mappings":{"total_avg_bytes":{"properties": {"address_a": {"type": "ip","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"},"address_b": {"type": "ip","cql_partition_key" : false,"cql_primary_key_order" : 1,"cql_collection": "singleton"},"total": {"type": "integer","cql_collection": "singleton"},"avg": {"type": "float","cql_collection": "singleton"},"count": {"type": "integer","cql_collection": "singleton"}}}}}'
 
 curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/batch_requests_responses_uniquehosts -d'{"settings":{"keyspace":"dns_batch"},"mappings":{"requests_responses_uniquehosts":{"properties": {"type": {"type": "keyword","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"}, "request_response": {"type": "keyword","cql_partition_key" : false,"cql_primary_key_order" : 1,"cql_collection": "singleton"}, "count": {"type": "integer","cql_collection": "singleton"}, "hosts": {"type": "ip","cql_collection": "set"}}}}}'
 
-curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/streaming_nameservers -d'{"settings":{"keyspace":"dns_streaming"},"mappings":{"name":{"properties": {"address": {"type": "ip","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"}, "packets_sent": {"type": "integer","cql_collection": "singleton"}, "packets_received": {"type": "integer","cql_collection": "singleton"}}}}}'
+curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/streaming_nameservers_packets -d'{"settings":{"keyspace":"dns_streaming"},"mappings":{"nameservers":{"properties": {"address": {"type": "ip","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"}, "packets_sent": {"type": "integer","cql_collection": "singleton"}, "packets_received": {"type": "integer","cql_collection": "singleton"}}}}}'
 
 curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/streaming_searched_categories -d'{"settings":{"keyspace":"dns_streaming"},"mappings":{"searched_categories":{"properties": {"category": {"type": "keyword","cql_partition_key" : true,"cql_primary_key_order" : 0,"cql_collection": "singleton"}, "requests": {"type": "integer","cql_collection": "singleton"}}}}}'
 

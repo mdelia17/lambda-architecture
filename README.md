@@ -27,6 +27,8 @@ Questo repository è organizzato in diverse sezioni (cartelle):
 * [cassandra](cassandra/): contenente il docker-compose, i file e gli script necessari per l'avvio e l'inizializzazione del cluster Elassandra, la creazione dell'indice Elasticsearch e per il caricamento della visualizzazione Kibana;
 * [lambda](lambda/): contenente il docker-compose, i file e gli script necessari per l'avvio e l'esecuzione di tutti i componenti degli strati batch e streaming.
 
+![](architettura.PNG)
+
 ## Prerequisiti
 
 Per utilizzare il repository è necessario avere installato:
